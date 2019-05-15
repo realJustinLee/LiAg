@@ -1,0 +1,163 @@
+[
+  {
+    "name": "No Hand",
+    "img": "../none.svg",
+    "file": [
+      "no_hand_L",
+      "no_hand_R"
+    ],
+    "author": "Li Xin",
+    "description": "No Hand",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 1.57,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": -1.57,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Open Hand",
+    "img": "open_hand.png",
+    "file": [
+      "open_hand_L",
+      "open_hand_R"
+    ],
+    "author": "Li Xin",
+    "description": "Open Hand",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 1.57,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": -1.57,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Closed Hand",
+    "img": "closed_hand.png",
+    "file": [
+      "closed_hand_L",
+      "closed_hand_R"
+    ],
+    "author": "Li Xin",
+    "description": "Closed Hand",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 1.57,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": -1.57,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Hook Hand",
+    "img": "hook.png",
+    "file": [
+      "hook_L",
+      "hook_R"
+    ],
+    "author": "Li Xin",
+    "description": "Open Hand",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 1.57,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": -1.57,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Robot Hand",
+    "img": "robot_hand.png",
+    "file": [
+      "robot_hand_L",
+      "robot_hand_R"
+    ],
+    "author": "Li Xin",
+    "description": "Robot Hand",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 1.57,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": -1.57,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Warrior",
+    "img": "barbarian.png",
+    "file": [
+      "barbarian_L",
+      "barbarian_R"
+    ],
+    "author": "Li Xin",
+    "description": "Barbarian",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 1.57,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": -1.57,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Blender",
+    "img": "blender.png",
+    "file": [
+      "blender_L",
+      "blender_R"
+    ],
+    "author": "Li Xin",
+    "description": "Blender",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 1.57,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": -1.57,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  }
+]

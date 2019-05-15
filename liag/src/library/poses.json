@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Default",
+    "img": "pose.svg",
+    "file": "default",
+    "author": "Li Xin",
+    "description": "Default Pose"
+  },
+  {
+    "name": "Egypt",
+    "img": "pose.svg",
+    "file": "egypt",
+    "author": "Li Xin",
+    "description": "Egypt Pose"
+  },
+  {
+    "name": "King Kong",
+    "img": "pose.svg",
+    "file": "king_kong",
+    "author": "Li Xin",
+    "description": "King Kong Pose"
+  },
+  {
+    "name": "Running",
+    "img": "pose.svg",
+    "file": "running",
+    "author": "Li Xin",
+    "description": "Running Pose"
+  },
+  {
+    "name": "Yeah",
+    "img": "pose.svg",
+    "file": "yeah",
+    "author": "Li Xin",
+    "description": "Yeah Pose"
+  }
+]
+  

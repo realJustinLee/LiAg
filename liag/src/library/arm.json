@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Default Arm",
+    "img": "default_arm.png",
+    "file": [
+      "default_arm_L",
+      "default_arm_R"
+    ],
+    "author": "Li Xin",
+    "description": "Default Arms",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Thin Arm",
+    "img": "thin_arm.png",
+    "file": [
+      "thin_arm_L",
+      "thin_arm_R"
+    ],
+    "author": "Li Xin",
+    "description": "Thin Arm",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Muscled Arm",
+    "img": "muscled_arm.png",
+    "file": [
+      "muscled_arm_L",
+      "muscled_arm_R"
+    ],
+    "author": "Li Xin",
+    "description": "Muscled Arm",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Robot Arm",
+    "img": "robot_arm.png",
+    "file": [
+      "robot_arm_L",
+      "robot_arm_R"
+    ],
+    "author": "Li Xin",
+    "description": "Robot Arm",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  },
+  {
+    "name": "Spyro Arm",
+    "img": "spyro.png",
+    "file": [
+      "spyro_arm_L",
+      "spyro_arm_R"
+    ],
+    "author": "Li Xin",
+    "description": "Wings",
+    "rotation": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    ],
+    "scale": 1
+  }
+]
