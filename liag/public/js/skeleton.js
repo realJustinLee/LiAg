@@ -2,6 +2,6 @@
  * LiXin Avatar Generator
  *
  * Based on https://github.com/mrdoob/three.js/
- * Tested on r94
+ * Tested on r98
  * @author lixin / https://github.com/Great-Li-Xin
  */

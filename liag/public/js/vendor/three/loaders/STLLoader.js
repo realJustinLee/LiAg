@@ -49,7 +49,7 @@ THREE.STLLoader.prototype = {
         loader.load(url, function (text) {
 
             try {
-                console.log("this :", text)
+                // console.log("this :", text);
                 onLoad(scope.parse(text));
 
             } catch (exception) {
