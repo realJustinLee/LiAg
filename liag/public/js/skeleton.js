@@ -7,5 +7,5 @@
  */
 
 
-window.loaded = false;
+window.loaded = true;
 window.partloaded = false;

@@ -13,6 +13,7 @@ class Buttons extends Component {
                     className="abs buttons"
                     id="download"
                     onClick={() => {
+                        console.log(this.props.avatarName);
                         window.export(this.props.avatarName);
                         // TODO: remove these after debug
                         for (let key in this.props.loadedMeshes) {

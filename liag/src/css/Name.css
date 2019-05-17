@@ -10,17 +10,12 @@ CONTENTS:
 ----------------------------------------------------------*/
 
 .name {
-    padding: 50px 0 0 100px;
+    padding: 50px;
     font-size: 40px;
     font-weight: 600;
+    margin-left: 120px;
 }
 
-.beta {
-    margin-left: 5px;
-    text-transform: lowercase;
-    font-size: 12px;
-}
-
-.my {
-    color: rgb(68, 114, 196);
+[contenteditable]:focus {
+    outline: 0 solid transparent;
 }

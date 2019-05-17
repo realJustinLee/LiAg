@@ -24,7 +24,7 @@ class Footer extends Component {
                     message={this.state.message}
                     updatePopup={this.updatePopup}
                 />
-                <div className="licence abs bottom">
+                <div className="love-author abs bottom">
                     <button onClick={() => {
                         const content = <span>
                             Author: <a href="https://www.linkedin.com/in/li-xin-53aa55107/"
@@ -42,6 +42,7 @@ class Footer extends Component {
                     &nbsp;|&nbsp;
                     <button onClick={() => {
                         const content = <span>
+                            This project is covered under:<br/>
                             <a href="https://github.com/Great-Li-Xin/LiAg/blob/master/LICENSE"
                                target="_blank" rel="noopener noreferrer">MIT License</a>
                         </span>;

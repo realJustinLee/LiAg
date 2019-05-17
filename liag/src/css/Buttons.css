@@ -24,16 +24,15 @@ CONTENTS:
     vertical-align: middle;
     line-height: 25px;
     font-size: 11px;
-    left: 30px;
-    /*bottom: 30px;*/
+    left: 200px;
 }
 
 .buttons:hover {
-    background-color: rgba(5, 24, 55, 0.5);
+    background-color: rgba(0, 100, 150, 0.65);
 }
 
 #download {
-    bottom: 110px;
+    bottom: 60px;
 }
 
 button {

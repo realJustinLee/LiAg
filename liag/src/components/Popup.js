@@ -12,7 +12,9 @@ class Popup extends Component {
             return (
                 <div className="screen abs top left">
                     <div className="popup abs">
-                        <img className="abs" src={logo} alt="LiXin Logo"/>
+                        <div className="img-container">
+                            <img className="abs info-logo" src={logo} alt="LiXin Logo"/>
+                        </div>
                         <div className="abs message">
                             <p>{this.props.message}</p>
                         </div>

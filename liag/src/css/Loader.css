@@ -10,14 +10,13 @@ CONTENTS:
 ----------------------------------------------------------*/
 
 .circle {
-    width: 40vmin;
-    height: 40vmin;
+    width: 30vmin;
+    height: 30vmin;
     border-radius: 100%;
     overflow: hidden;
-    top: calc(50% - 20vmin);
-    left: calc(50% - 20vmin);
+    top: calc(50% - 15vmin);
+    left: calc(50% - 15vmin);
     background-color: #282c34;
-    padding: 10px;
     animation: scale 2.5s ease-in-out 0s infinite normal forwards;
 }
 

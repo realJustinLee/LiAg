@@ -1,0 +1,191 @@
+/* --------------------------------------------------------
+Style Sheet for the Selector.js component
+
+author: Li Xin
+e-mail: JustinDellAdam@live.com
+github: https://github.com/Great-Li-Xin
+
+CONTENTS:
+- Selector
+- Side Indicator
+- Elements
+- Corner vignette
+----------------------------------------------------------*/
+
+/* Box div for Selector */
+/* -------------------- */
+
+.box {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px #000000;
+
+    position: absolute;
+    width: calc(100% - 50px);
+    margin-top: 30px;
+    height: calc(100% - 80px);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.selector {
+    top: 60px;
+    left: 5px;
+    width: calc(100% - 5px);
+    height: calc(100% - 60px);
+}
+
+.selector-no-padding {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(103px, 103px));
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: transparent;
+}
+
+.selector-full {
+    top: 115px;
+    height: calc(100% - 115px);
+}
+
+/* Media queries for the number of columns in the selector */
+@media (min-width: 1130px) {
+    .selector-no-padding {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1700px) {
+    .selector-no-padding {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Side indicator style */
+/* -------------------- */
+
+.switch {
+    top: 60px;
+    height: 40px;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    background-color: rgba(144, 144, 144, 0.2);
+    border: 1px #a8a8a8 solid;
+}
+
+.side {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: white;
+    background-color: #00000059;
+    cursor: pointer;
+}
+
+.side:hover {
+    background-color: rgba(0, 100, 150, 0.5);
+}
+
+.side-selected {
+    background-color: rgba(0, 100, 150, 0.8);
+}
+
+.R {
+    border-left: 1px #a8a8a8 solid;
+    border-radius: 0 10px 10px 0;
+}
+
+.L {
+    border-radius: 10px 0 0 10px;
+}
+
+/* Element in the selector styling */
+/* ------------------------------- */
+
+.el {
+    min-height: 100px;
+    max-height: 100px;
+    padding-top: 2px;
+    display: inline;
+    border-radius: 10px;
+    background-color: #00000059;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.el:hover {
+    background-color: #121c1f59;
+    box-shadow: 0px 0px 5px #353535;
+}
+
+.img {
+    padding: 2px;
+}
+
+.img img {
+    display: block;
+    margin: auto;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.el-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15px;
+    color: white;
+    background-color: rgba(15, 15, 15, 1);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 10px;
+}
+
+/* Small top corner vignettes for links and premium information */
+/* ------------------------------------------------------------ */
+
+.premium {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 10px 0 10px 0;
+    background-color: rgba(230, 190, 60, 0.6);
+}
+
+.link {
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 0 10px 0 10px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.link:hover {
+    background-color: rgba(0, 0, 0, 0.25)
+}
+
+.icon {
+    font-size: 11px;
+}
+
+.big-icon {
+    /* Premium icon is bigger */
+    font-size: 13px;
+}

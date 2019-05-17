@@ -9,13 +9,13 @@ CONTENTS:
 - licence styling
 ----------------------------------------------------------*/
 
-.licence {
+.love-author {
     bottom: 4px;
     width: 100%;
     text-align: center;
     font-size: 10px;
 }
 
-.licence a {
+.love-author a {
     cursor: pointer;
 }

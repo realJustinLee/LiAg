@@ -23,7 +23,7 @@ class PartLoader extends Component {
             return (
                 <div className="screen abs top left">
                     <div className="abs circle">
-                        <img src={logo} width="100" height="100" alt="logo"/>
+                        <img src={logo} className="App-logo" alt="logo"/>
                     </div>
                 </div>
             );
