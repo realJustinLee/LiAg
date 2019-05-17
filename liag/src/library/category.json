@@ -8,16 +8,16 @@
     "img_file": "torso.svg"
   },
   {
-    "name": "leg",
-    "img_file": "leg.svg"
-  },
-  {
     "name": "arm",
     "img_file": "arm.svg"
   },
   {
     "name": "hand",
     "img_file": "hand.svg"
+  },
+  {
+    "name": "leg",
+    "img_file": "leg.svg"
   },
   {
     "name": "foot",
