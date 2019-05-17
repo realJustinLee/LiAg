@@ -9,6 +9,40 @@ CONTENTS:
 - main classes that are used almost everywhere
 ----------------------------------------------------------*/
 
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .abs {
     position: absolute;
 }
@@ -39,21 +73,9 @@ CONTENTS:
     color: white;
 }
 
-.smart-phone {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    color: black;
-}
-
 .full-screen-message {
-    position: absolute;
-    top: 60%;
-    left: 50%;
     text-align: center;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
+    width: 90%;
     padding: 20px;
 }
 

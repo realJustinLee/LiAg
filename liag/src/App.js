@@ -38,7 +38,7 @@ class App extends Component {
         this.state = {
             category: data,
             currentCategory: "head",
-            avatarName: "myAvatar",
+            avatarName: "untitled",
             UIDisplayed: true,
             popup: false,
             loadedMeshes: {
@@ -55,7 +55,7 @@ class App extends Component {
                 Stand: "circle"
             },
             editor: true,
-            part_loading: false,
+            partLoading: false,
             message: "Sorry, this feature is still under development..."
         }
     };
@@ -73,8 +73,8 @@ class App extends Component {
     updateMeshes = loadedMeshes => {
         this.setState({loadedMeshes});
     };
-    updateLoading = part_loading => {
-        this.setState({part_loading});
+    updateLoading = partLoading => {
+        this.setState({partLoading});
     };
     updatePopupMessage = message => {
         this.setState({message});
@@ -104,7 +104,6 @@ class App extends Component {
                         category={this.state.category}
                         currentCategory={this.state.currentCategory}
                         updateCategory={this.updateCategory}
-                        // updatePose={this.updatePose}
                         UIDisplayed={this.state.UIDisplayed}
                         loadedMeshes={this.state.loadedMeshes}
                         updateMeshes={this.updateMeshes}
@@ -114,23 +113,36 @@ class App extends Component {
                         updateLoading={this.updateLoading}
                     />
                     <PartLoader
-                        loading={this.state.part_loading}
+                        loading={this.state.partLoading}
                         updateLoading={this.updateLoading}
                     />
                 </BrowserView>
                 <MobileView>
-                    <div className="abs top left smart-phone">
-                        <img src={logo} alt="company logo"/>
-                        <div className="full-screen-message">
-                            <Typed
-                                strings={[
-                                    "Sorry, this content is currently unavailable on mobile... ^2000",
-                                    "Come back soon for updates!"
-                                ]}
-                                typeSpeed={50}
-                                showCursor={true}
-                            />
-                        </div>
+                    <div className="App">
+                        <header className="App-header">
+                            <img src={logo} className="App-logo" alt="logo"/>
+                            <div className="full-screen-message">
+                                <code>
+                                    <Typed
+                                        strings={[
+                                            "Sorry" ,
+                                            "This content is currently unavailable on mobile.^2000",
+                                            "Come back soon for updates!"
+                                        ]}
+                                        typeSpeed={50}
+                                        showCursor={true}
+                                    />
+                                </code>
+                            </div>
+                            <a
+                                className="App-link"
+                                href="https://github.com/Great-Li-Xin/LiAg"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Fork on GitHub
+                            </a>
+                        </header>
                     </div>
                 </MobileView>
             </div>

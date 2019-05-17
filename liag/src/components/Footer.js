@@ -10,7 +10,7 @@ class Footer extends Component {
             message: "",
             popup: false
         };
-    };
+    }
 
     updatePopup = popup => {
         this.setState({popup})
@@ -47,7 +47,7 @@ class Footer extends Component {
                         </span>;
                         this.setState({popup: true, message: content});
                     }}>
-                        <spam>LICENSE</spam>
+                        <span>LICENSE</span>
                     </button>
                 </div>
             </div>
