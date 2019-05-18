@@ -187,7 +187,6 @@ function init() {
     function buildRenderer() {
         // Create a renderer with antialias
         renderer = new THREE.WebGLRenderer({antialias: true});
-        let container = document.getElementById("canvas");
         renderer.shadowMap.enabled = true;
         // default THREE.PCFShadowMap
         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -196,7 +195,25 @@ function init() {
         renderer.setSize((6 / 5) * window.innerWidth, window.innerHeight);
 
         // Append Renderer to DOM
+        let container = document.getElementById("canvas");
         container.appendChild(renderer.domElement);
+
+
+        /** The Sky Box */
+        let path = "../img/library/textures/fantasy-";
+        let format = ".jpg";
+        let urls = [
+            path + "px" + format,
+            path + "nx" + format,
+            path + "py" + format,
+            path + "ny" + format,
+            path + "pz" + format,
+            path + "nz" + format
+        ];
+
+        let reflectionCube = new THREE.CubeTextureLoader().load(urls);
+        reflectionCube.format = THREE.RGBFormat;
+        scene.background = reflectionCube;
 
         let size = 50;
         let divisions = 60;

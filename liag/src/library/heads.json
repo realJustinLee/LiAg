@@ -71,6 +71,19 @@
     "link": ""
   },
   {
+    "name": "Dragon Head",
+    "img": "dragon_head.png",
+    "file": "dragon_head",
+    "author": "Li Xin",
+    "description": "Dragon Head",
+    "rotation": {
+      "x": 0,
+      "y": 3.1415,
+      "z": 0
+    },
+    "scale": 1
+  },
+  {
     "name": "Stormtrooper",
     "img": "stormtrooper.png",
     "file": "stormtrooper",
@@ -191,20 +204,6 @@
     "rotation": {
       "x": 0,
       "y": 0,
-      "z": 0
-    },
-    "scale": 1,
-    "link": ""
-  },
-  {
-    "name": "Hat Man",
-    "img": "hat_man.png",
-    "file": "hat_man",
-    "author": "Li Xin",
-    "description": "Hat Man",
-    "rotation": {
-      "x": 0,
-      "y": 3.14,
       "z": 0
     },
     "scale": 1,
