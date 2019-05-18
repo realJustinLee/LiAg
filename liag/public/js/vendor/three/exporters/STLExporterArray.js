@@ -151,7 +151,7 @@ THREE.STLExporterArray.prototype = {
             for (let i = 0, l = faces.length; i < l; i++) {
                 let face = faces[i];
 
-                vector.copy(face.normal)
+                vector.copy(face.normal);
 
                 output += '\tfacet normal ' + vector.x + ' ' + vector.y + ' ' + vector.z + '\n';
                 output += '\t\touter loop\n';

@@ -46,11 +46,11 @@ CONTENTS:
 }
 
 .category:hover {
-    background-color: rgba(0, 100, 150, 0.5);
+    background-color: rgba(97, 218, 251, 0.4);
 }
 
 .selected-category {
-    background-color: rgba(0, 100, 150, 0.8);
+    background-color: rgba(97, 218, 251, 0.8);
 }
 
 .category img {

@@ -13,7 +13,7 @@ CONTENTS:
 /* ---------- */
 
 .search-container {
-    color: rgb(29, 29, 29);
+    color: white;
     background-color: rgba(0, 0, 0, 0.35);
     width: calc(100% - 20px);
     height: 40px;
@@ -50,7 +50,7 @@ CONTENTS:
     right: 0;
     top: 0;
     width: 40px;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(97, 218, 251, 0.4);
     height: 40px;
     border-radius: 0 10px 10px 0;
 }
@@ -58,5 +58,5 @@ CONTENTS:
 .search-button:hover {
     cursor: pointer;
     color: white;
-    background-color: rgba(31, 31, 31, 0.4);
+    background-color: rgba(97, 218, 251, 0.8);
 }

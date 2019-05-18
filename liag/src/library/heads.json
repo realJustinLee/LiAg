@@ -112,11 +112,11 @@
     "link": ""
   },
   {
-    "name": "Hellion Rams",
-    "img": "hellion_rams.png",
-    "file": "hellion_rams",
+    "name": "Monster Head",
+    "img": "monster_head.png",
+    "file": "monster_head",
     "author": "Li Xin",
-    "description": "Hellion Rams",
+    "description": "Monster Head",
     "rotation": {
       "x": 0,
       "y": 3.1415,
@@ -169,7 +169,7 @@
   },
   {
     "name": "Bender Head",
-    "img": "blender.png",
+    "img": "blender_head.png",
     "file": "blender_head",
     "author": "Li Xin",
     "description": "Bender Head",
@@ -198,7 +198,7 @@
   {
     "name": "Box Head",
     "img": "box_head.png",
-    "file": "test_head",
+    "file": "box_head",
     "author": "Li Xin",
     "description": "Box Head",
     "rotation": {

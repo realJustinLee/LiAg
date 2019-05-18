@@ -120,7 +120,6 @@ THREE.FindMinGeometry.prototype = {
                 }
 
             });
-
             return output;
         };
     }())

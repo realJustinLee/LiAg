@@ -11,7 +11,7 @@ let camera, scene, renderer;
 let controls, loader;
 
 let selected = "Head";
-let color = {r: 0.4, g: 0.5, b: 0.55};
+let color = {r: 0.41, g: 0.51, b: 0.56};
 
 // This group will contain all the meshes but not the floor, the lights etc...
 let group = new THREE.Group();
@@ -27,6 +27,7 @@ group.getMyObjectByName = function (name) {
 };
 
 // let bBoxStand;
+
 window.loaded = false;
 window.partloaded = false;
 
@@ -78,7 +79,7 @@ let loadedMeshes = {
     }
 };
 
-// List of information on the meshes (attach points, body groups...)
+// List of information on the meshes (attach points, body groups, etc...)
 let meshStaticInfo = {
     Torso: {
         bodyPart: "torso",
@@ -225,7 +226,8 @@ function init() {
     function buildControls() {
         controls = new THREE.OrbitControls(camera, renderer.domElement);
         // controls.target.set(-1,0,0);
-        controls.minDistance = 2; //Controlling max and min for ease of use
+        //Controlling max and min for ease of use
+        controls.minDistance = 2;
         controls.maxDistance = 7;
         controls.minPolarAngle = 0;
         controls.maxPolarAngle = Math.PI / 2 - 0.1;
@@ -238,17 +240,19 @@ function init() {
         scene.add(hemisphereLight);
 
         //Create a PointLight and turn on shadows for the light
-        let light = new THREE.PointLight(0xc1c1c1, 1, 100);
+        let light = new THREE.PointLight(0xcccccc, 1, 100);
         light.position.set(3, 10, 10);
         light.castShadow = true;
         //Set up shadow properties for the light
-        light.shadow.mapSize.width = 2048; // default
-        light.shadow.mapSize.height = 2048; // default
+        // default width
+        light.shadow.mapSize.width = 2048;
+        // default height
+        light.shadow.mapSize.height = 2048;
         light.decay = 1;
         scene.add(light);
 
         // This light is here to show the details in the back (no shadows)
-        let backLight = new THREE.PointLight(0xa1bbc4, 1, 100);
+        let backLight = new THREE.PointLight(0xcccccc, 1, 100);
         backLight.position.set(0, 2, -20);
         backLight.penumbra = 2;
         scene.add(backLight);
@@ -464,7 +468,7 @@ window.changeStand = function (stand) {
                         child.name = "mesh-stand";
                         child.castShadow = true;
                         child.receiveShadow = true;
-                        child.material.color = {r: 0.4, g: 0.5, b: 0.55};
+                        child.material.color = {r: 0.41, g: 0.51, b: 0.56};
                     }
                 });
 
