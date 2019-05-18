@@ -99,6 +99,7 @@ class Category extends Component {
                         currentCategory={this.props.currentCategory}
                         isLeft={this.state.isLeft}
                         updateLeft={this.updateLeft}
+                        // updatePose={this.props.updatePose}
                         loadedMeshes={this.props.loadedMeshes}
                         updateMeshes={this.props.updateMeshes}
                         updatePopup={this.props.updatePopup}

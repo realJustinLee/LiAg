@@ -6,6 +6,7 @@
  * @author mrdoob / http://mrdoob.com/
  * @author lixin / https://github.com/Great-Li-Xin
  */
+
 THREE.STLExporter = function () {
 };
 

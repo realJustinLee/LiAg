@@ -104,6 +104,7 @@ class App extends Component {
                         category={this.state.category}
                         currentCategory={this.state.currentCategory}
                         updateCategory={this.updateCategory}
+                        // updatePose={this.updatePose}
                         UIDisplayed={this.state.UIDisplayed}
                         loadedMeshes={this.state.loadedMeshes}
                         updateMeshes={this.updateMeshes}
