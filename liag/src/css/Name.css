@@ -10,11 +10,13 @@ CONTENTS:
 ----------------------------------------------------------*/
 
 .name {
-    padding: 50px;
     font-size: 40px;
-    font-weight: 600;
-    margin-left: 120px;
-    color: #61dafb;
+    margin: 50px 50px 50px 150px;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    background-color: rgba(97, 218, 251, 0.5);
+    box-shadow: 0 0 10px #61dafb;
+    border-radius: 10px;
 }
 
 [contenteditable]:focus {
