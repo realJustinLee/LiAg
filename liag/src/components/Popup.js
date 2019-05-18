@@ -1,8 +1,8 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 // Loading Assets (SubComponents & CSS)
-import "../css/Popup.css"
+import "../css/Popup.css";
 import logo from '../logo.svg';
 
 class Popup extends Component {

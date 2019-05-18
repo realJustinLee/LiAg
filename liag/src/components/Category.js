@@ -1,8 +1,8 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 
 // Loading Assets (SubComponents & CSS)
-import Selector from "./Selector"
-import "../css/Category.css"
+import Selector from "./Selector";
+import "../css/Category.css";
 
 class Category extends Component {
     constructor(props) {

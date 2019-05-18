@@ -1,7 +1,7 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 
-import logo from "../logo.svg"
-import "../css/Loader.css"
+import logo from "../logo.svg";
+import "../css/Loader.css";
 
 class PageLoader extends Component {
 

@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import Editor from "./Editor"
-import axios from "axios"
+import Editor from "./Editor";
+import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import SearchBar from "./SearchBar"
-import "../css/Selector.css"
+import SearchBar from "./SearchBar";
+import "../css/Selector.css";
 
 import headElements from "../library/heads.json";
 import handElements from "../library/hands.json";
@@ -167,7 +167,7 @@ class Selector extends Component {
                         }
                         if (filteredLibrary[i].premium) {
                             this.props.updatePopupMessage(
-                                "Sorry this is a premium object, this feature is still in development..."
+                                "Sorry, This is a premium object."
                             );
                             this.props.updatePopup(true);
                         } else {
@@ -214,7 +214,7 @@ class Selector extends Component {
                 onClick={() => {
                     this.props.updatePopup(true);
                     this.props.updatePopupMessage(
-                        "Sorry this feature is still in development..."
+                        "Sorry, This feature is still in development."
                     );
                 }}
             >

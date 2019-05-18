@@ -1,7 +1,7 @@
-import React, {Component} from "react"
-import Popup from './Popup'
+import React, {Component} from "react";
+import Popup from './Popup';
 
-import "../css/Footer.css"
+import "../css/Footer.css";
 
 class Footer extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class Footer extends Component {
                     message={this.state.message}
                     updatePopup={this.updatePopup}
                 />
-                <div className="love-author abs bottom App-link">
+                <div className="love-author abs bottom">
                     <button onClick={() => {
                         const content = <span>
                             Author: <a href="https://www.linkedin.com/in/li-xin-53aa55107/"

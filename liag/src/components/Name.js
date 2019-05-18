@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ContentEditable from "react-contenteditable"
+import ContentEditable from "react-contenteditable";
 
 // Loading Assets (SubComponents & CSS)
 import "../css/Name.css";

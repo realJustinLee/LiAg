@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
 import logo from "../logo.svg";
-import "../css/Loader.css"
+import "../css/Loader.css";
 
 class PartLoader extends Component {
 

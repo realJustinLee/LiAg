@@ -688,7 +688,7 @@ document.body.onresize = function () {
     //aspect ratio update
     camera.aspect = ((6 / 5) * window.innerWidth) / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.domElement.style.position = (-1 / 5) * window.innerWidth;
+    renderer.domElement.style.position = -(1 / 5) * window.innerWidth;
 };
 
 let link = document.createElement("a");

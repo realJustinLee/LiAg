@@ -96,7 +96,7 @@ class App extends Component {
                         loadedMeshes={this.state.loadedMeshes}
                     />
                     <Popup
-                        popupDisplayed={this.state.popup}
+                        popup={this.state.popup}
                         message={this.state.message}
                         updatePopup={this.updatePopup}
                     />

@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import NumericInput from "react-numeric-input"
+import NumericInput from "react-numeric-input";
 
-import "../css/Editor.css"
+import "../css/Editor.css";
 
-import bones from "../library/bones.json"
-import model from "../library/poses/model.json"
+import bones from "../library/bones.json";
+import model from "../library/poses/model.json";
 
 class Editor extends Component {
     constructor(props) {
