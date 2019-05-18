@@ -24,7 +24,7 @@ class Footer extends Component {
                     message={this.state.message}
                     updatePopup={this.updatePopup}
                 />
-                <div className="love-author abs bottom">
+                <div className="love-author abs bottom App-link">
                     <button onClick={() => {
                         const content = <span>
                             Author: <a href="https://www.linkedin.com/in/li-xin-53aa55107/"

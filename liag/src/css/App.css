@@ -95,10 +95,10 @@ CONTENTS:
     user-select: none;
 }
 
-.black-screen {
+.dark-screen {
     width: 100%;
     height: 100%;
-    background-color: rgb(100, 100, 100);
+    background-color: #282c34;
     z-index: 5000;
 }
 

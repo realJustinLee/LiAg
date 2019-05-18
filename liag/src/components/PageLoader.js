@@ -24,7 +24,7 @@ class PageLoader extends Component {
     render() {
         if (this.state.loading) {
             return (
-                <div className="black-screen abs top left">
+                <div className="dark-screen abs top left">
                     <div className="abs circle">
                         <img src={logo} className="App-logo" alt="logo"/>
                     </div>
