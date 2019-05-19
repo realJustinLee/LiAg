@@ -167,11 +167,17 @@ function init() {
         return scene.getObjectByName(name);
     };
 
+    // buildAxes();
     buildCamera();
     buildRenderer();
     buildControls();
     buildLights();
     buildFloor();
+
+    function buildAxes() {
+        let axes = new THREE.AxesHelper(20);
+        scene.add(axes);
+    }
 
     function buildCamera() {
         camera = new THREE.PerspectiveCamera(
@@ -201,17 +207,37 @@ function init() {
         let container = document.getElementById("canvas");
         container.appendChild(renderer.domElement);
 
-
-        /** The Sky Box */
+        /** The Sky Box
+         *
+         * CubeTextureLoader axes different from three.js
+         * see https://github.com/mrdoob/three.js/issues/12657
+         *
+         * By convention, likely based on the RenderMan spec from the 1990's cube maps,
+         * which are specified by WebGL(and three.js).
+         * In a coordinate system in which positive x-axis is to the right when looking to the positive z-axis.
+         * In other words, in a left-handed coordinate system.
+         * By continuing this convention, preexisting cube maps continued to render correctly.
+         *
+         * three.js uses a right-handed coordinate system.
+         * So environment maps used in three.js appear to have positive x-axis, and negative x-axis swapped.
+         * (This is the case for every three.js cube map example.)
+         *
+         * px = left
+         * nx = right
+         * py = top
+         * ny = bottom
+         * pz = front
+         * nz = back
+         */
         let path = "../img/library/textures/fantasy-";
-        let format = ".jpg";
+        let extension = ".jpg";
         let urls = [
-            path + "px" + format,
-            path + "nx" + format,
-            path + "py" + format,
-            path + "ny" + format,
-            path + "pz" + format,
-            path + "nz" + format
+            path + "px" + extension,
+            path + "nx" + extension,
+            path + "py" + extension,
+            path + "ny" + extension,
+            path + "pz" + extension,
+            path + "nz" + extension
         ];
 
         let reflectionCube = new THREE.CubeTextureLoader().load(urls);
