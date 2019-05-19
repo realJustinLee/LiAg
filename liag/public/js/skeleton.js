@@ -182,7 +182,7 @@ function init() {
     function buildCamera() {
         camera = new THREE.PerspectiveCamera(
             75,
-            (6 / 5) * (window.innerWidth / window.innerHeight),
+            (window.innerWidth / window.innerHeight),
             0.001,
             1000
         );
@@ -201,7 +201,7 @@ function init() {
         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
         // Configure renderer size to fill up the whole window
-        renderer.setSize((6 / 5) * window.innerWidth, window.innerHeight);
+        renderer.setSize(window.innerWidth, window.innerHeight);
 
         // Append Renderer to DOM
         let container = document.getElementById("canvas");
@@ -733,11 +733,10 @@ function render() {
 
 document.body.onresize = function () {
     //size of viewport
-    renderer.setSize((6 / 5) * window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     //aspect ratio update
-    camera.aspect = ((6 / 5) * window.innerWidth) / window.innerHeight;
+    camera.aspect = (window.innerWidth) / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.domElement.style.position = -(1 / 5) * window.innerWidth;
 };
 
 let link = document.createElement("a");

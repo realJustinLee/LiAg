@@ -15,5 +15,6 @@ code {
 canvas {
     z-index: -1;
     position: absolute;
-    left: -20%;
+    left: 0;
+    top: 0;
 }
