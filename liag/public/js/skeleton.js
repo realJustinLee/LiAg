@@ -155,7 +155,7 @@ function init() {
 
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x282c34);
-    scene.fog = new THREE.Fog(0x282c34, 2, 20);
+    scene.fog = new THREE.Fog(0x282c34, 1, 20);
     scene.add(group);
     scene.getMyObjectByName = function (name) {
         if (name === "Torso_Shoulder_L") {
@@ -174,10 +174,10 @@ function init() {
     buildLights();
     buildFloor();
 
-    function buildAxes() {
-        let axes = new THREE.AxesHelper(20);
-        scene.add(axes);
-    }
+    // function buildAxes() {
+    //     let axes = new THREE.AxesHelper(20);
+    //     scene.add(axes);
+    // }
 
     function buildCamera() {
         camera = new THREE.PerspectiveCamera(
@@ -188,9 +188,9 @@ function init() {
         );
 
         // Camera position in space (will be controlled by the OrbitControls later on)
-        camera.position.z = 2;
         camera.position.x = -1;
         camera.position.y = 2;
+        camera.position.z = 2;
     }
 
     function buildRenderer() {
@@ -229,7 +229,7 @@ function init() {
          * pz = front
          * nz = back
          */
-        let path = "../img/library/textures/fantasy-";
+        let path = "../img/library/textures/fantasy/";
         let extension = ".jpg";
         let urls = [
             path + "px" + extension,
@@ -246,8 +246,10 @@ function init() {
 
         let size = 50;
         let divisions = 60;
+        let colorCenterLine = 0x306d7d;
+        let colorGrid = 0x61dafb;
 
-        let gridHelper = new THREE.GridHelper(size, divisions);
+        let gridHelper = new THREE.GridHelper(size, divisions, colorCenterLine, colorGrid);
         scene.add(gridHelper);
     }
 
@@ -745,13 +747,13 @@ document.body.appendChild(link); // Firefox workaround, see #6594
 
 function save(blob, filename) {
     link.href = URL.createObjectURL(blob);
-    link.download = filename || "data.json";
+    link.download = filename || "untitled.json";
     link.click();
 }
 
-function saveArrayBuffer(buffer, filename) {
-    save(new Blob([buffer], {type: "application/octet-stream"}), filename);
-}
+// function saveArrayBuffer(buffer, filename) {
+//     save(new Blob([buffer], {type: "application/octet-stream"}), filename);
+// }
 
 function saveString(text, filename) {
     save(new Blob([text], {type: "text/plain"}), filename);
