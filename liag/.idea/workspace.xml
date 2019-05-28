@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90e47fb1-a11b-4773-afde-3c0fa3a4ced7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/library/textures/fantasy-base.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/library/textures/fantasy-me.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/library/textures/fantasy-nx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/library/textures/fantasy-ny.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/library/textures/fantasy-nz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/library/textures/fantasy-px.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/library/textures/fantasy-py.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/library/textures/fantasy-pz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/skeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/skeleton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Buttons.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,57 +15,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/skeleton.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1279">
+              <caret line="469" lean-forward="true" selection-start-line="469" selection-end-line="469" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/FindMinGeometry.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/css/App.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-302">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/skeleton.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="245" lean-forward="true" selection-start-line="245" selection-end-line="245" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/Buttons.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/vendor/three/exporters/STLExporter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/vendor/three/exporters/STLExporterArray.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="995">
-              <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+            <state relative-caret-position="225">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
@@ -92,7 +47,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>renderer</find>
       <find>elementDiv</find>
       <find>loaded</find>
       <find>pop</find>
@@ -122,6 +76,7 @@
       <find>loader</find>
       <find>endsol</find>
       <find>Box</find>
+      <find>three</find>
     </findStrings>
     <replaceStrings>
       <replace>Pose</replace>
@@ -194,7 +149,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="834" />
+    <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -226,48 +181,12 @@
               <item name="liag" type="b2602c69:ProjectViewProjectNode" />
               <item name="liag" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liag" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="three" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liag" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="three" type="462c0819:PsiDirectoryNode" />
-              <item name="exporters" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="liag" type="b2602c69:ProjectViewProjectNode" />
               <item name="liag" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,7 +212,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -348,12 +267,19 @@
       <workItem from="1558212165355" duration="5737000" />
       <workItem from="1558220026020" duration="9179000" />
       <workItem from="1558264132705" duration="24000" />
-      <workItem from="1558309106477" duration="2532000" />
+      <workItem from="1558309106477" duration="5296000" />
+      <workItem from="1558430940427" duration="372000" />
+      <workItem from="1558489899300" duration="355000" />
+      <workItem from="1558532243227" duration="120000" />
+      <workItem from="1558661826116" duration="489000" />
+      <workItem from="1558768501845" duration="708000" />
+      <workItem from="1558953278803" duration="770000" />
+      <workItem from="1558965897926" duration="1398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85447000" />
+    <option name="totallyTimeSpent" value="92423000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -368,13 +294,13 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.16757083" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.110910185" />
       <window_info id="Structure" order="1" sideWeight="0.50076103" side_tool="true" weight="0.16757083" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4996986" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996986" weight="0.272449" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -414,24 +340,11 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-nx.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-px.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-pz.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-py.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-ny.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-nz.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-px.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-pz.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-py.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-ny.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/img/library/textures/fantasy-nz.jpg" />
     <entry file="file://$PROJECT_DIR$/public/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -488,16 +401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -588,13 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -609,13 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/three.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="22041" column="13" selection-start-line="22041" selection-start-column="13" selection-end-line="22041" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -642,20 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/loaders/STLLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/loaders/GLTFLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -671,6 +546,34 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/exporters/STLExporter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/exporters/STLExporterArray.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="995">
+          <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Buttons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -694,24 +597,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/exporters/STLExporter.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        <state relative-caret-position="192">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/exporters/STLExporterArray.js">
+    <entry file="file://$PROJECT_DIR$/src/css/Buttons.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="995">
-          <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+        <state relative-caret-position="325">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/loaders/GLTFLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/loaders/STLLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="917">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/controls/OrbitControls.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vendor/three/three.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="895">
+          <caret line="2110" column="8" selection-start-line="2110" selection-start-column="8" selection-end-line="2110" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/FindMinGeometry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="917">
-          <caret line="122" column="48" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+        <state relative-caret-position="228">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#218#282#0" expanded="true" />
@@ -721,31 +658,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/FindMinGeometry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/skeleton.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="245" lean-forward="true" selection-start-line="245" selection-end-line="245" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/Buttons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="-1279">
+          <caret line="469" lean-forward="true" selection-start-line="469" selection-end-line="469" />
         </state>
       </provider>
     </entry>

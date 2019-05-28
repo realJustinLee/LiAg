@@ -17,6 +17,7 @@ let color = {r: 0.41, g: 0.51, b: 0.56};
 
 // This group will contain all the meshes but not the floor, the lights etc...
 let group = new THREE.Group();
+
 // Fix the spelling mistake while modeling.
 group.getMyObjectByName = function (name) {
     if (name === "Torso_Shoulder_L") {
@@ -452,8 +453,8 @@ function placeStand() {
     } else {
         loader.load(
             "models/stand/circle.glb",
-            gltf => {
-                let root = gltf.scene.children[0];
+            glTF => {
+                let root = glTF.scene.children[0];
 
                 root.traverse(function (child) {
                     if (child instanceof THREE.Mesh) {
@@ -710,13 +711,6 @@ window.export = function (name) {
                 }
             });
         }
-
-        // Logging the components
-        // scene.traverse(function (child) {
-        //     if (child instanceof THREE.Mesh) {
-        //         console.log(child.name)
-        //     }
-        // });
 
         return stlList;
     }
