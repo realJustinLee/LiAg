@@ -256,7 +256,7 @@ function init() {
 
     function buildControls() {
         controls = new THREE.OrbitControls(camera, renderer.domElement);
-        // controls.target.set(-1,0,0);
+        controls.target.set(0,0,0);
         //Controlling max and min for ease of use
         controls.minDistance = 2;
         controls.maxDistance = 7;
@@ -307,7 +307,7 @@ function init() {
 }
 
 function clearPosition(item) {
-    // This function is used to clear the position of an imported gltf file
+    // This function is used to clear the position of an imported glTF file
     item.position.x = 0;
     item.position.y = 0;
     item.position.z = 0;
@@ -341,8 +341,8 @@ function placeMesh(
     // MeshType : {ArmR, ArmL, Head, HandR, HandL, LegR, LegL, FootR, FootL, Torso}
     loader.load(
         "models/" + bodyPartClass + "/" + meshName + ".glb",
-        gltf => {
-            let root = gltf.scene.children[0];
+        glTF => {
+            let root = glTF.scene.children[0];
             root.traverse(function (child) {
                 if (child instanceof THREE.Mesh) {
                     // Gives a fixed name to the mesh and same gray color
@@ -491,8 +491,8 @@ window.changeStand = function (stand) {
         group.remove(scene.getMyObjectByName("mesh-stand"));
         loader.load(
             "models/stand/" + stand + ".glb",
-            gltf => {
-                let root = gltf.scene.children[0];
+            glTF => {
+                let root = glTF.scene.children[0];
 
                 root.traverse(function (child) {
                     if (child instanceof THREE.Mesh) {
