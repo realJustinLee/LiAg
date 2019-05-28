@@ -737,7 +737,8 @@ document.body.onresize = function () {
 
 let link = document.createElement("a");
 link.style.display = "none";
-document.body.appendChild(link); // Firefox workaround, see #6594
+// Firefox workaround
+document.body.appendChild(link);
 
 function save(blob, filename) {
     link.href = URL.createObjectURL(blob);

@@ -25,7 +25,7 @@ import Buttons from "./components/Buttons";
 import Popup from "./components/Popup";
 import PageLoader from "./components/PageLoader";
 import PartLoader from "./components/PartLoader";
-import MyGithub from "./components/MyGithub";
+import MyGitHub from "./components/MyGitHub";
 
 library.add(faTimesCircle);
 library.add(faDollarSign);
@@ -85,7 +85,7 @@ class App extends Component {
             <div>
                 <BrowserView>
                     <PageLoader/>
-                    <MyGithub/>
+                    <MyGitHub/>
                     <Name
                         avatarName={this.state.avatarName}
                         updateAvatarName={this.updateAvatarName}

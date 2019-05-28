@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class MyGithub extends Component {
+class MyGitHub extends Component {
 
     render() {
         return (
@@ -17,4 +17,4 @@ class MyGithub extends Component {
     }
 }
 
-export default MyGithub;
+export default MyGitHub;
