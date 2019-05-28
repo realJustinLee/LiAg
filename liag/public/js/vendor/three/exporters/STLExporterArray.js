@@ -48,7 +48,8 @@ THREE.STLExporterArray.prototype = {
                     const bufferPositions = bufferGeometry.getAttribute('position');
 
                     function computeFaceNormal(a, b, c) {
-                        const cb = new THREE.Vector3(), ab = new THREE.Vector3();
+                        const cb = new THREE.Vector3();
+                        const ab = new THREE.Vector3();
 
                         const vA = new THREE.Vector3().fromBufferAttribute(bufferPositions, a);
                         const vB = new THREE.Vector3().fromBufferAttribute(bufferPositions, b);
