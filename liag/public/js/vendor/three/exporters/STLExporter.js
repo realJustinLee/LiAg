@@ -31,7 +31,7 @@ THREE.STLExporter.prototype = {
 
                 if (mesh instanceof THREE.Mesh) {
 
-                    output += 'solid\n';
+                    output += 'solid exported\n';
 
                     const {
                         matrixWorld,
@@ -126,12 +126,9 @@ THREE.STLExporter.prototype = {
                         output += '\t\tendloop\n';
                         output += '\tendfacet\n';
                     }
-                    output += 'endsolid\n';
+                    output += 'endsolid exported\n';
                 }
             });
-
-            // output += 'endsolid exported\n';
-
             return output;
         };
     }())
