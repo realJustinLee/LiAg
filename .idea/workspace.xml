@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da21ed35-ede1-4000-bc56-d663dddc7996" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LiAg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LiAg.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liag/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liag/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liag/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/liag/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liag/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/liag/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liag/README.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +86,10 @@
       <workItem from="1561034309586" duration="235000" />
       <workItem from="1561093692543" duration="1728000" />
       <workItem from="1561103004377" duration="2314000" />
+      <workItem from="1561467036244" duration="179000" />
+      <workItem from="1561613416720" duration="233000" />
+      <workItem from="1561629512938" duration="138000" />
+      <workItem from="1562312218494" duration="2908000" />
     </task>
     <servers />
   </component>
