@@ -39,7 +39,7 @@ The Exported STL Model
 ![](./extra/img/TheExportedSTL.png)
 
 ## TODO
--[ ] Merge the `three.js` lib into the `react` project
+- [ ] Merge the `three.js` lib into the `react` project
 
 # Made with ❤ by [Li Xin](https://github.com/Great-Li-Xin)!
 ™ and © 1997-2019 Li Xin. All Rights Reserved. [License Agreement](./LICENSE)
