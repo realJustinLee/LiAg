@@ -1,5 +1,5 @@
 # LiAg
-LiAg(LiXin Avatar Generator) is an open source 3D avatar modelling software,
+LiAg (LiXin Avatar Generator) is an open source 3D avatar modelling software implemented in React.js and WebGL,
 which provides web side 3D avatar modeling and rendering service,
 and users can export the avatars into STL files which can be used for 3D printing.
 
