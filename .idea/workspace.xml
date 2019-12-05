@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="da21ed35-ede1-4000-bc56-d663dddc7996" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liag/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/liag/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liag/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/liag/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liag/public/js/vendor/three/three.js" beforeDir="false" afterPath="$PROJECT_DIR$/liag/public/js/vendor/three/three.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liag/public/js/FindMinGeometry.js" beforeDir="false" afterPath="$PROJECT_DIR$/liag/public/js/FindMinGeometry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liag/public/js/skeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/liag/public/js/skeleton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liag/public/js/vendor/three/exporters/STLExporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/liag/public/js/vendor/three/exporters/STLExporter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liag/public/js/vendor/three/exporters/STLExporterArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/liag/public/js/vendor/three/exporters/STLExporterArray.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +108,7 @@
       <workItem from="1565159874571" duration="263000" />
       <workItem from="1571196576145" duration="63000" />
       <workItem from="1574645304585" duration="2125000" />
+      <workItem from="1574649858050" duration="193000" />
     </task>
     <servers />
   </component>
@@ -128,21 +129,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="2539" height="423" key="GridCell.Tab.0.bottom" timestamp="1574647409412">
+    <state width="2539" height="423" key="GridCell.Tab.0.bottom" timestamp="1574649365041">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2539" height="423" key="GridCell.Tab.0.bottom/-1680.390.1680.1050/0.0.2560.1440/2560.-292.1080.1920@0.0.2560.1440" timestamp="1574647409412" />
-    <state width="2539" height="423" key="GridCell.Tab.0.center" timestamp="1574647409409">
+    <state width="2539" height="423" key="GridCell.Tab.0.bottom/-1680.390.1680.1050/0.0.2560.1440/2560.-292.1080.1920@0.0.2560.1440" timestamp="1574649365041" />
+    <state width="2539" height="423" key="GridCell.Tab.0.center" timestamp="1574649365037">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2539" height="423" key="GridCell.Tab.0.center/-1680.390.1680.1050/0.0.2560.1440/2560.-292.1080.1920@0.0.2560.1440" timestamp="1574647409409" />
-    <state width="2539" height="423" key="GridCell.Tab.0.left" timestamp="1574647409408">
+    <state width="2539" height="423" key="GridCell.Tab.0.center/-1680.390.1680.1050/0.0.2560.1440/2560.-292.1080.1920@0.0.2560.1440" timestamp="1574649365037" />
+    <state width="2539" height="423" key="GridCell.Tab.0.left" timestamp="1574649365037">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2539" height="423" key="GridCell.Tab.0.left/-1680.390.1680.1050/0.0.2560.1440/2560.-292.1080.1920@0.0.2560.1440" timestamp="1574647409408" />
-    <state width="2539" height="423" key="GridCell.Tab.0.right" timestamp="1574647409410">
+    <state width="2539" height="423" key="GridCell.Tab.0.left/-1680.390.1680.1050/0.0.2560.1440/2560.-292.1080.1920@0.0.2560.1440" timestamp="1574649365037" />
+    <state width="2539" height="423" key="GridCell.Tab.0.right" timestamp="1574649365040">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2539" height="423" key="GridCell.Tab.0.right/-1680.390.1680.1050/0.0.2560.1440/2560.-292.1080.1920@0.0.2560.1440" timestamp="1574647409410" />
+    <state width="2539" height="423" key="GridCell.Tab.0.right/-1680.390.1680.1050/0.0.2560.1440/2560.-292.1080.1920@0.0.2560.1440" timestamp="1574649365040" />
   </component>
 </project>

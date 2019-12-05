@@ -1,7 +1,7 @@
 /**
  * Based on https://github.com/mrdoob/three.js/examples/js/exporters/STLExporter.js
  *
- * Tested on r104
+ * Tested on r110
  *
  * @author kjlubick / https://github.com/kjlubick
  * @author kovacsv / http://kovacsv.hu/
