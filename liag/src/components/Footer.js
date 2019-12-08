@@ -27,7 +27,7 @@ class Footer extends Component {
                 <div className="love-author abs bottom">
                     <button onClick={() => {
                         const content = <span>
-                            Author: <a href="https://www.linkedin.com/in/li-xin-53aa55107/"
+                            Author: <a href="https://www.linkedin.com/in/li-xin-justin/"
                                        target="_blank" rel="noopener noreferrer">Li Xin</a>
                             <br/>
                             E-Mail: <a href="mailto:JustinDellAdam@live.com"

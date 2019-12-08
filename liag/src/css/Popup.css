@@ -35,6 +35,7 @@ CONTENTS:
     height: 100px;
     text-align: center;
     vertical-align: center;
+    transform: translate(-50%, -50%);
 }
 
 .message p {
@@ -42,7 +43,6 @@ CONTENTS:
     margin: 0;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -80%);
 }
 
 .message p a {
@@ -50,15 +50,16 @@ CONTENTS:
 }
 
 .img-container {
-    width: 30vmin;
-    height: 30vmin;
-    margin-left: calc(250px - 15vmin);
-    padding-top: 30px;
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    padding-top: 50px;
+    padding-bottom: 100px;
     animation: scale 2.5s ease-in-out 0s infinite normal forwards;
 }
 
 .info-logo {
-    animation: App-logo-spin infinite 10s linear;
+    animation: App-logo-spin infinite 8s linear;
     pointer-events: none;
 }
 

@@ -12,7 +12,7 @@ CONTENTS:
 .buttons {
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 10px #000000;
-    transition: background-color 0.2s;
+    transition: background-color 0.1s;
     padding: 10px;
     text-align: center;
     border-radius: 0.5em;
@@ -26,7 +26,8 @@ CONTENTS:
 }
 
 .buttons:hover {
-    background-color: rgba(97, 218, 251, 0.4);
+    background-color: rgba(97, 218, 251, 0.5);
+    box-shadow: 0 0 10px #61dafb80;
 }
 
 #download {

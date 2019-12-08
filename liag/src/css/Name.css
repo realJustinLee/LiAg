@@ -14,9 +14,15 @@ CONTENTS:
     margin: 50px 50px 50px 150px;
     padding: 5px 15px 5px 15px;
     color: white;
-    background-color: rgba(97, 218, 251, 0.5);
-    box-shadow: 0 0 10px #61dafb;
+    transition: background-color 0.1s;
+    background-color: rgba(97, 218, 251, 0.1);
+    box-shadow: 0 0 10px rgba(97, 218, 251, 0.2);
     border-radius: 10px;
+}
+
+.name:hover {
+    background-color: rgba(97, 218, 251, 0.5);
+    box-shadow: 0 0 10px #61dafb80;
 }
 
 [contenteditable]:focus {
