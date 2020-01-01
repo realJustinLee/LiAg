@@ -88,5 +88,50 @@
     "x": 0,
     "y": 0,
     "z": 0
+  },
+  "Torso_Neck": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "Torso_UpperArm_L": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ArmL_Hand_L": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "Torso_UpperArm_R": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ArmR_Hand_R": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "Torso_UpperLeg_L": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "LegL_Foot_L": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "Torso_UpperLeg_R": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "LegR_Foot_R": {
+    "x": 0,
+    "y": 0,
+    "z": 0
   }
 }
