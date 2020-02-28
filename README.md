@@ -4,7 +4,7 @@ which provides web side 3D avatar modeling and rendering service,
 and users can export the avatars into STL files which can be used for 3D printing.
 
 ## Requirements
-> - node.js `v13.5.0`
+> - node.js `v13.7.0`
 > - react.js `16.12.0`
 > - three.js `r110`
 
@@ -16,7 +16,7 @@ and users can export the avatars into STL files which can be used for 3D printin
 - [x] iPadOS
 - [x] macOS
 - [x] Linux
-- [x] Windows 1
+- [x] Windows 10
 
 ## Installation Guide
 
@@ -31,13 +31,13 @@ npm start
 
 ## Screen Shots
 The Component Selector
-![](./extra/img/ComponentSelector.png)
+![Component Selector](./extra/img/ComponentSelector.png)
 
 The Pose Editor
-![](./extra/img/PoseEditor.png)
+![Pose Editor](./extra/img/PoseEditor.png)
 
 The Exported STL Model
-![](./extra/img/TheExportedSTL.png)
+![The Exported STL](./extra/img/TheExportedSTL.png)
 
 ## TODO
 - [ ] Merge the `three.js` lib into the `react` project
