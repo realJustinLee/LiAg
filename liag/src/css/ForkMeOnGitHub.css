@@ -1,3 +1,14 @@
+/* --------------------------------------------------------
+Style Sheet for the ForkMeOnGitHub.js component
+
+author: Li Xin
+e-mail: JustinDellAdam@live.com
+github: https://github.com/Great-Li-Xin
+
+CONTENTS:
+- Fork Me On GitHub Tag
+----------------------------------------------------------*/
+
 .bg-theme:before {
     background-color: rgba(97, 218, 251, 0.5);
     transition: background-color 0.1s;

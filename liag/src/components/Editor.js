@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import NumericInput from "react-numeric-input";
 
+// Loading Assets (SubComponents & CSS)
 import "../css/Editor.css";
 
 import bones from "../library/bones.json";

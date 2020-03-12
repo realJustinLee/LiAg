@@ -25,7 +25,7 @@ import Buttons from "./components/Buttons";
 import Popup from "./components/Popup";
 import PageLoader from "./components/PageLoader";
 import PartLoader from "./components/PartLoader";
-import MyGitHub from "./components/MyGitHub";
+import ForkMeOnGitHub from "./components/ForkMeOnGitHub";
 
 library.add(faTimesCircle);
 library.add(faDollarSign);
@@ -85,7 +85,7 @@ class App extends Component {
             <div>
                 <BrowserView>
                     <PageLoader/>
-                    <MyGitHub/>
+                    <ForkMeOnGitHub/>
                     <Name
                         avatarName={this.state.avatarName}
                         updateAvatarName={this.updateAvatarName}
@@ -141,7 +141,7 @@ class App extends Component {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Fork on GitHub
+                                Fork me on GitHub
                             </a>
                         </header>
                     </div>

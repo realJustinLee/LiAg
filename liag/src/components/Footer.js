@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Popup from './Popup';
 
+// Loading Assets (SubComponents & CSS)
 import "../css/Footer.css";
 
 class Footer extends Component {

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 
+// Loading Assets (SubComponents & CSS)
 import logo from "../logo.svg";
 import "../css/Loader.css";
 

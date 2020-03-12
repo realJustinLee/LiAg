@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+// Loading Assets (SubComponents & CSS)
 import "../css/SearchBar.css";
 
 class SearchBar extends Component {

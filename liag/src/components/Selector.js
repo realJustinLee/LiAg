@@ -3,6 +3,7 @@ import Editor from "./Editor";
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+// Loading Assets (SubComponents & CSS)
 import SearchBar from "./SearchBar";
 import "../css/Selector.css";
 
