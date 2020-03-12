@@ -3,7 +3,7 @@
  *
  * Based on https://github.com/mrdoob/three.js/
  *
- * Tested on r110
+ * Tested on r114
  *
  * @author lixin / https://github.com/Great-Li-Xin
  */
@@ -168,17 +168,20 @@ function init() {
         return scene.getObjectByName(name);
     };
 
-    // buildAxes();
+    buildDevHelper();
     buildCamera();
     buildRenderer();
     buildControls();
     buildLights();
     buildFloor();
 
-    // function buildAxes() {
-    //     let axes = new THREE.AxesHelper(20);
-    //     scene.add(axes);
-    // }
+    function buildDevHelper() {
+        // build Axes
+        let axes = new THREE.AxesHelper(2);
+        scene.add(axes);
+        // expose scene to DOM
+        window.scene = scene
+    }
 
     function buildCamera() {
         camera = new THREE.PerspectiveCamera(
@@ -256,7 +259,7 @@ function init() {
 
     function buildControls() {
         controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.target.set(0,0,0);
+        controls.target.set(0, 0, 0);
         //Controlling max and min for ease of use
         controls.minDistance = 2;
         controls.maxDistance = 7;
@@ -272,7 +275,7 @@ function init() {
 
         //Create a PointLight and turn on shadows for the light
         let light = new THREE.PointLight(0xcccccc, 1, 100);
-        light.position.set(3, 10, 10);
+        light.position.set(2, 3, 3);
         light.castShadow = true;
         //Set up shadow properties for the light
         // default width
@@ -284,7 +287,7 @@ function init() {
 
         // This light is here to show the details in the back (no shadows)
         let backLight = new THREE.PointLight(0xcccccc, 1, 100);
-        backLight.position.set(0, 2, -20);
+        backLight.position.set(0, 1, -3);
         backLight.penumbra = 2;
         scene.add(backLight);
     }

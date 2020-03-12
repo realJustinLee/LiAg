@@ -15,8 +15,9 @@ class PartLoader extends Component {
         }, 200);
     }
 
-    componentWillUpdate(nextProps, nextState, nextContext) {
+    getSnapshotBeforeUpdate(prevProps, prevState) {
         clearInterval(this.check)
+        return null
     }
 
     render() {

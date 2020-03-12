@@ -1,7 +1,7 @@
 /**
  * Based on https://github.com/mrdoob/three.js/examples/js/exporters/STLExporter.js
  *
- * Tested on r110
+ * Tested on r114
  *
  * @author kjlubick / https://github.com/kjlubick
  * @author kovacsv / http://kovacsv.hu/
@@ -119,7 +119,7 @@ THREE.STLExporterArray.prototype = {
                                     tempVector.multiplyScalar(weights[k]);
                                     //the inverse takes the vector into local bone space
                                     tempVector.applyMatrix4(inverses[k])
-                                    //which is then transformed to the appropriate world space
+                                        //which is then transformed to the appropriate world space
                                         .applyMatrix4(skinMatrices[k]);
                                     finalVector.add(tempVector);
                                 }

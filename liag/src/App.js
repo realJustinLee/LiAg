@@ -38,7 +38,7 @@ class App extends Component {
         this.state = {
             category: data,
             currentCategory: "head",
-            avatarName: "Give It A Name",
+            avatarName: "Give it a name",
             UIDisplayed: true,
             popup: false,
             loadedMeshes: {
