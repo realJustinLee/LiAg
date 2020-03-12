@@ -168,7 +168,7 @@ function init() {
         return scene.getObjectByName(name);
     };
 
-    buildDevHelper();
+    // buildDevHelper();
     buildCamera();
     buildRenderer();
     buildControls();
