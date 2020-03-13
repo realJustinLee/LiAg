@@ -38,7 +38,7 @@ class Footer extends Component {
                                        target="_blank" rel="noopener noreferrer">https://github.com/Great-Li-Xin</a>
                         </span>;
                         this.setState({popup: true, message: content});
-                    }}><span role="img" aria-label="Love">Made with ❤️ by Li Xin</span>
+                    }}><span role="img" aria-label="Love">Made with️ ❤ by Li Xin</span>
                     </button>
                     &nbsp;|&nbsp;
                     <button onClick={() => {
