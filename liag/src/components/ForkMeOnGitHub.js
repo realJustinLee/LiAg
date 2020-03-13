@@ -21,8 +21,7 @@ function ForkMeOnGitHub() {
                 </svg>
             </a>
             <a className="github-fork-ribbon left-bottom fixed bg-theme" href="https://github.com/Great-Li-Xin/LiAg"
-               data-ribbon="Fork me on GitHub"
-               title="Fork me on GitHub">Fork me on GitHub</a>
+               data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
         </div>
     );
 }
