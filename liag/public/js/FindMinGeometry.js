@@ -3,7 +3,7 @@
  *
  * Based on https://github.com/mrdoob/three.js/
  *
- * Tested on r114
+ * Tested on r115
  *
  * @author lixin / https://github.com/Great-Li-Xin
  */

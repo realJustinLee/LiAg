@@ -3,7 +3,7 @@
  *
  * Based on https://github.com/mrdoob/three.js/
  *
- * Tested on r114
+ * Tested on r115
  *
  * @author lixin / https://github.com/Great-Li-Xin
  */
@@ -279,9 +279,9 @@ function init() {
         light.castShadow = true;
         //Set up shadow properties for the light
         // default width
-        light.shadow.mapSize.width = 2048;
+        light.shadow.mapSize.width = 4096;
         // default height
-        light.shadow.mapSize.height = 2048;
+        light.shadow.mapSize.height = 4096;
         light.decay = 1;
         scene.add(light);
 
