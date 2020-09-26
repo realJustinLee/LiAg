@@ -4,9 +4,9 @@ which provides web side 3D avatar modeling and rendering service,
 and users can export the avatars into STL files which can be used for 3D printing.
 
 ## Requirements
-> - node.js `v14.3.0`
+> - node.js `v14.12.0`
 > - react.js `16.13.1`
-> - three.js `r115`
+> - three.js `r120`
 
 ## Version
 - `0.2.2`
