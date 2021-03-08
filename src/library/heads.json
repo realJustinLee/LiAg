@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Default Head",
+    "img": "default.png",
+    "file": "default_head",
+    "author": "Li Xin",
+    "description": "Default Head",
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Premium Head",
+    "img": "default.png",
+    "file": "default_head",
+    "author": "Li Xin",
+    "description": "Premium Head",
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 1,
+    "link": "https://www.linkedin.com/in/li-xin-53aa55107/",
+    "premium": true
+  },
+  {
+    "name": "Default Man Head",
+    "img": "default_man_head.png",
+    "file": "default_man_head",
+    "author": "Li Xin",
+    "description": "Default Man Head",
+    "rotation": {
+      "x": 0,
+      "y": 3.1415,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Groot Head",
+    "img": "groot.png",
+    "file": "groot",
+    "author": "Li Xin",
+    "description": "Groot Head",
+    "rotation": {
+      "x": 0,
+      "y": 3.1415,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Big Head",
+    "img": "big_head.png",
+    "file": "big_head",
+    "author": "Li Xin",
+    "description": "Big Head",
+    "rotation": {
+      "x": -0.3,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Dragon Head",
+    "img": "dragon_head.png",
+    "file": "dragon_head",
+    "author": "Li Xin",
+    "description": "Dragon Head",
+    "rotation": {
+      "x": 0,
+      "y": 3.1415,
+      "z": 0
+    },
+    "scale": 1
+  },
+  {
+    "name": "Stormtrooper",
+    "img": "stormtrooper.png",
+    "file": "stormtrooper",
+    "author": "Li Xin",
+    "description": "Stoormtrooper",
+    "rotation": {
+      "x": 0,
+      "y": 3.1415,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Dobby",
+    "img": "dobby.png",
+    "file": "dobby",
+    "author": "Li Xin",
+    "description": "Dobby from Harry Potter",
+    "rotation": {
+      "x": 0,
+      "y": 3.1415,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Monster Head",
+    "img": "monster_head.png",
+    "file": "monster_head",
+    "author": "Li Xin",
+    "description": "Monster Head",
+    "rotation": {
+      "x": 0,
+      "y": 3.1415,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Flexi Dead Head",
+    "img": "flexi_dead_head.png",
+    "file": "flexi_dead_head",
+    "author": "Li Xin",
+    "description": "Flexi Dead Head",
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Iron Bubble Head",
+    "img": "iron_bubble_head.png",
+    "file": "iron_bubble_head",
+    "author": "Li Xin",
+    "description": "Iron Bubble Head",
+    "rotation": {
+      "x": 0,
+      "y": 3.14,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Muscled Man",
+    "img": "muscled_man.png",
+    "file": "muscled_man",
+    "author": "Li Xin",
+    "description": "Muscled Man",
+    "rotation": {
+      "x": 0,
+      "y": 3.14,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Bender Head",
+    "img": "blender_head.png",
+    "file": "blender_head",
+    "author": "Li Xin",
+    "description": "Bender Head",
+    "rotation": {
+      "x": 0,
+      "y": 3.14,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Warrior Head",
+    "img": "barbarian.png",
+    "file": "barbarian",
+    "author": "Li Xin",
+    "description": "Barbarian Head",
+    "rotation": {
+      "x": 0,
+      "y": 3.14,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  },
+  {
+    "name": "Box Head",
+    "img": "box_head.png",
+    "file": "box_head",
+    "author": "Li Xin",
+    "description": "Box Head",
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 1,
+    "link": ""
+  }
+]
