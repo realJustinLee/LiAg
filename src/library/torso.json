@@ -3,7 +3,7 @@
     "name": "Default Torso",
     "img": "default_torso.png",
     "file": "default_torso",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Default Torso",
     "scale": 1
   },
@@ -11,7 +11,7 @@
     "name": "Turtle Torso",
     "img": "turtle_torso.png",
     "file": "turtle_torso",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Turtle Torso",
     "scale": 1
   },
@@ -19,7 +19,7 @@
     "name": "Blender Torso",
     "img": "blender_torso.png",
     "file": "blender",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Blender Torso",
     "scale": 1
   },
@@ -27,7 +27,7 @@
     "name": "Warrior Torso",
     "img": "barbarian.png",
     "file": "barbarian",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Barbarian Torso",
     "scale": 1
   },
@@ -35,7 +35,7 @@
     "name": "Man Torso",
     "img": "man_torso.png",
     "file": "man_torso",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Man Torso",
     "scale": 1
   }

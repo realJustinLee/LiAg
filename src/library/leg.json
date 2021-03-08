@@ -6,7 +6,7 @@
       "default_leg_L",
       "default_leg_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Default Legs",
     "rotation": [
       {
@@ -29,7 +29,7 @@
       "robot_leg_L",
       "robot_leg_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Robot Legs",
     "rotation": [
       {

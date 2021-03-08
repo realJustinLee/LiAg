@@ -6,7 +6,7 @@
       "no_hand_L",
       "no_hand_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "No Hand",
     "rotation": [
       {
@@ -29,7 +29,7 @@
       "open_hand_L",
       "open_hand_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Open Hand",
     "rotation": [
       {
@@ -52,7 +52,7 @@
       "closed_hand_L",
       "closed_hand_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Closed Hand",
     "rotation": [
       {
@@ -75,7 +75,7 @@
       "hook_L",
       "hook_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Open Hand",
     "rotation": [
       {
@@ -98,7 +98,7 @@
       "robot_hand_L",
       "robot_hand_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Robot Hand",
     "rotation": [
       {
@@ -121,7 +121,7 @@
       "barbarian_L",
       "barbarian_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Barbarian",
     "rotation": [
       {
@@ -144,7 +144,7 @@
       "blender_L",
       "blender_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Blender",
     "rotation": [
       {

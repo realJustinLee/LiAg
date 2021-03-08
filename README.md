@@ -4,12 +4,12 @@ which provides web side 3D avatar modeling and rendering service,
 and users can export the avatars into STL files which can be used for 3D printing.
 
 ## Requirements
-> - node.js `v14.12.0`
-> - react.js `16.13.1`
+> - node.js `v15.11.0`
+> - react.js `17.0.1`
 > - three.js `r120`
 
 ## Version
-- `0.2.2`
+- `1.0.0`
 
 ## Platform Compatibility
 - [ ] iOS
@@ -24,8 +24,8 @@ Run the following code in the terminal to install and run the project.
 
 ```
 git clone https://github.com/realJustinLee/LiAg.git
-cd LiAg/liag
-npm install
+cd LiAg
+npm run reinstall
 npm start
 ```
 

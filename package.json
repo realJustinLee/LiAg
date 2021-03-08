@@ -12,8 +12,10 @@
     "axios": "^0.21.1",
     "github-fork-ribbon-css": "^0.2.3",
     "react": "^17.0.1",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
+    "react-typed": "^1.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "typescript": "^4.2.3",
@@ -25,8 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rm -rf node_modules && rm -rf build && rm -f package-lock.json",
-    "reinstall": "npm run clean && npm install",
-    "rebuild": "npm run clean && npm install && npm run build"
+    "reinstall": "npm run clean && npm install --legacy-peer-deps",
+    "rebuild": "npm run reinstall && npm run build"
   },
   "eslintConfig": {
     "extends": [

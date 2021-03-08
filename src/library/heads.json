@@ -3,7 +3,7 @@
     "name": "Default Head",
     "img": "default.png",
     "file": "default_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Default Head",
     "rotation": {
       "x": 0,
@@ -17,7 +17,7 @@
     "name": "Premium Head",
     "img": "default.png",
     "file": "default_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Premium Head",
     "rotation": {
       "x": 0,
@@ -25,14 +25,14 @@
       "z": 0
     },
     "scale": 1,
-    "link": "https://www.linkedin.com/in/li-xin-53aa55107/",
+    "link": "https://www.linkedin.com/in/li-xin-justin/",
     "premium": true
   },
   {
     "name": "Default Man Head",
     "img": "default_man_head.png",
     "file": "default_man_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Default Man Head",
     "rotation": {
       "x": 0,
@@ -46,7 +46,7 @@
     "name": "Groot Head",
     "img": "groot.png",
     "file": "groot",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Groot Head",
     "rotation": {
       "x": 0,
@@ -60,7 +60,7 @@
     "name": "Big Head",
     "img": "big_head.png",
     "file": "big_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Big Head",
     "rotation": {
       "x": -0.3,
@@ -74,7 +74,7 @@
     "name": "Dragon Head",
     "img": "dragon_head.png",
     "file": "dragon_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Dragon Head",
     "rotation": {
       "x": 0,
@@ -87,7 +87,7 @@
     "name": "Stormtrooper",
     "img": "stormtrooper.png",
     "file": "stormtrooper",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Stoormtrooper",
     "rotation": {
       "x": 0,
@@ -101,7 +101,7 @@
     "name": "Dobby",
     "img": "dobby.png",
     "file": "dobby",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Dobby from Harry Potter",
     "rotation": {
       "x": 0,
@@ -115,7 +115,7 @@
     "name": "Monster Head",
     "img": "monster_head.png",
     "file": "monster_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Monster Head",
     "rotation": {
       "x": 0,
@@ -129,7 +129,7 @@
     "name": "Flexi Dead Head",
     "img": "flexi_dead_head.png",
     "file": "flexi_dead_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Flexi Dead Head",
     "rotation": {
       "x": 0,
@@ -143,7 +143,7 @@
     "name": "Iron Bubble Head",
     "img": "iron_bubble_head.png",
     "file": "iron_bubble_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Iron Bubble Head",
     "rotation": {
       "x": 0,
@@ -157,7 +157,7 @@
     "name": "Muscled Man",
     "img": "muscled_man.png",
     "file": "muscled_man",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Muscled Man",
     "rotation": {
       "x": 0,
@@ -171,7 +171,7 @@
     "name": "Bender Head",
     "img": "blender_head.png",
     "file": "blender_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Bender Head",
     "rotation": {
       "x": 0,
@@ -185,7 +185,7 @@
     "name": "Warrior Head",
     "img": "barbarian.png",
     "file": "barbarian",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Barbarian Head",
     "rotation": {
       "x": 0,
@@ -199,7 +199,7 @@
     "name": "Box Head",
     "img": "box_head.png",
     "file": "box_head",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Box Head",
     "rotation": {
       "x": 0,

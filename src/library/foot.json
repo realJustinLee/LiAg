@@ -6,7 +6,7 @@
       "default_foot_L",
       "default_foot_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Default Foot",
     "rotation": [
       {
@@ -29,7 +29,7 @@
       "buckled_foot_L",
       "buckled_foot_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Buckled Shoe",
     "rotation": [
       {
@@ -52,7 +52,7 @@
       "boots_L",
       "boots_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Boots",
     "rotation": [
       {
@@ -75,7 +75,7 @@
       "barbarian_L",
       "barbarian_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Barbarian",
     "rotation": [
       {
@@ -98,7 +98,7 @@
       "futurama_L",
       "futurama_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Futurama",
     "rotation": [
       {
@@ -121,7 +121,7 @@
       "timberland_L",
       "timberland_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Timberland",
     "rotation": [
       {

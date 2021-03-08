@@ -6,7 +6,7 @@
       "default_arm_L",
       "default_arm_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Default Arms",
     "rotation": [
       {
@@ -29,7 +29,7 @@
       "thin_arm_L",
       "thin_arm_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Thin Arm",
     "rotation": [
       {
@@ -52,7 +52,7 @@
       "muscled_arm_L",
       "muscled_arm_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Muscled Arm",
     "rotation": [
       {
@@ -75,7 +75,7 @@
       "robot_arm_L",
       "robot_arm_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Robot Arm",
     "rotation": [
       {
@@ -98,7 +98,7 @@
       "spyro_arm_L",
       "spyro_arm_R"
     ],
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Wings",
     "rotation": [
       {

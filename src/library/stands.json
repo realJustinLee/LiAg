@@ -3,7 +3,7 @@
     "name": "Cylinder",
     "img": "circle.png",
     "file": "circle",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Default cylinder stand",
     "scale": 1
   },
@@ -11,7 +11,7 @@
     "name": "Hexagon",
     "img": "hexagon.png",
     "file": "hexagon",
-    "author": "Li Xin",
+    "author": "Justin Lee",
     "description": "Hexagon stand",
     "scale": 1
   }
