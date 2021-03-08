@@ -1,5 +1,5 @@
 # LiAg
-LiAg (LiXin Avatar Generator) is an open source 3D avatar modelling software implemented in React.js and WebGL,
+LiAg (Li Xin (Justin Lee) Avatar Generator) is an open source 3D avatar modelling software implemented in React.js and WebGL,
 which provides web side 3D avatar modeling and rendering service,
 and users can export the avatars into STL files which can be used for 3D printing.
 
@@ -23,7 +23,7 @@ and users can export the avatars into STL files which can be used for 3D printin
 Run the following code in the terminal to install and run the project.
 
 ```
-git clone https://github.com/Great-Li-Xin/LiAg.git
+git clone https://github.com/realJustinLee/LiAg.git
 cd LiAg/liag
 npm install
 npm start
@@ -42,5 +42,5 @@ The Exported STL Model
 ## TODO
 - [ ] Merge the `three.js` lib into the `react` project
 
-# Made with ❤ by [Li Xin](https://github.com/Great-Li-Xin)!
-™ and © 1997-2019 Li Xin. All Rights Reserved. [License Agreement](./LICENSE)
+# Made with ❤ by [Justin Lee](https://github.com/realJustinLee)!
+™ and © 1997-2021 Justin Lee. All Rights Reserved. [License Agreement](./LICENSE)
