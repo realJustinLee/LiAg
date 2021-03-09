@@ -151,6 +151,14 @@ class MainStage extends Component {
 
         window.loaded = false;
         window.partloaded = false;
+
+        document.body.onresize = function () {
+            //size of viewport
+            this.renderer.setSize(window.innerWidth, window.innerHeight);
+            //aspect ratio update
+            this.camera.aspect = window.innerWidth / window.innerHeight;
+            this.camera.updateProjectionMatrix();
+        }.bind(this);
     }
 
     // Init Function which will create all the
@@ -223,6 +231,7 @@ class MainStage extends Component {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
 
         // Append Renderer to DOM
+        // TODO: appendChild will append the element twich. pending node to fix.
         document.body.appendChild(this.renderer.domElement);
 
         /** The Sky Box
