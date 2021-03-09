@@ -5,9 +5,41 @@ import Typed from "react-typed";
 import logo from './logo.svg';
 import './css/App.css';
 
+// Loading the data this way for now
+import CategoryList from "./library/category.json";
+
 import ForkMeOnGitHub from "./components/ForlMeOnGitHub";
+import Buttons from "./components/Buttons";
+import MainStage from "./components/MainStage";
+
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            category: CategoryList,
+            currentCategory: "head",
+            avatarName: "Give it a name",
+            UIDisplayed: true,
+            popup: false,
+            loadedMeshes: {
+                Torso: "default_torso",
+                LegR: "default_leg_R",
+                LegL: "default_leg_L",
+                Head: "default_head",
+                ArmR: "default_arm_R",
+                ArmL: "default_arm_L",
+                HandR: "open_hand_R",
+                HandL: "open_hand_L",
+                FootR: "default_foot_R",
+                FootL: "default_foot_L",
+                Stand: "circle"
+            },
+            editor: true,
+            partLoading: false,
+            message: "Sorry, this feature is still under development..."
+        }
+    };
 
     render() {
         return (
