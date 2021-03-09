@@ -39,6 +39,9 @@ class App extends Component {
             partLoading: false,
             message: "Sorry, this feature is still under development..."
         }
+        this.mainStage = new MainStage();
+        this.mainStage.init();
+        this.mainStage.animate();
     };
 
     render() {

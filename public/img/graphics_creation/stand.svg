@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="lixin" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+     viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+    <g>
+	<ellipse class="st0" cx="141.8" cy="132.4" rx="84.5" ry="19.8"/>
+        <path class="st1" d="M231,149.9c0,11.6-39.9,21-89.2,21s-89.2-9.4-89.2-21"/>
+        <line class="st2" x1="57.3" y1="131.9" x2="52.5" y2="149.9"/>
+        <line class="st2" x1="226.3" y1="132.4" x2="231" y2="149.9"/>
+</g>
+</svg>
