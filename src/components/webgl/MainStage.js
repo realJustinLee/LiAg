@@ -201,7 +201,6 @@ class MainStage {
         let axes = new THREE.AxesHelper(2);
         axes.name = "axes";
         this.scene.add(axes);
-        this.loadDefaultMeshes();
 
         // expose scene to DOM
         window.scene = this.scene
@@ -396,6 +395,9 @@ class MainStage {
                     }
                 });
 
+                // Fix naming errors in modeling (errors in glb).
+                root.name = MeshType;
+
                 // group is one element with all the meshes and bones of the character
                 this.group.add(root);
                 this.scene.updateMatrixWorld(true);
@@ -409,7 +411,6 @@ class MainStage {
                 }
 
                 if (highLight) {
-                    // TODO: when loadingDefault twice or change mesh Head will cause error
                     this.changeColor(MeshType, this.color);
                 }
 
