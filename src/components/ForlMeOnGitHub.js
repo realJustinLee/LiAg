@@ -18,7 +18,7 @@ function ForkMeOnGitHub() {
                         fill="currentColor" className="octo-body"/>
                 </svg>
             </a>
-            <a className="github-fork-ribbon left-bottom fixed bg-theme" href="https://github.com/Great-Li-Xin/LiAg"
+            <a className="github-fork-ribbon left-bottom fixed bg-theme" href="https://github.com/realJustinLee/LiAg"
                data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
         </div>
     );

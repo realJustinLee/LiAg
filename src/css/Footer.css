@@ -1,0 +1,22 @@
+/* --------------------------------------------------------
+Style Sheet for the Footer.js component
+
+author: Justin Lee
+e-mail: JustinDellAdam@live.com
+github: https://github.com/realJustinLee
+
+CONTENTS:
+- licence styling
+----------------------------------------------------------*/
+
+.love-author {
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+.love-author a {
+    cursor: pointer;
+}
