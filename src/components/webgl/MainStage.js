@@ -302,17 +302,17 @@ class MainStage {
         this.scene.add(hemisphereLight);
 
         //Create a PointLight and turn on shadows for the light
-        let light = new THREE.PointLight(0xcccccc, 1, 100);
-        light.name = "light";
-        light.position.set(2, 3, 3);
-        light.castShadow = true;
+        let pointLight = new THREE.PointLight(0xcccccc, 1, 100);
+        pointLight.name = "pointLight";
+        pointLight.position.set(2, 3, 3);
+        pointLight.castShadow = true;
         //Set up shadow properties for the light
         // default width
-        light.shadow.mapSize.width = 4096;
+        pointLight.shadow.mapSize.width = 4096;
         // default height
-        light.shadow.mapSize.height = 4096;
-        light.decay = 1;
-        this.scene.add(light);
+        pointLight.shadow.mapSize.height = 4096;
+        pointLight.decay = 1;
+        this.scene.add(pointLight);
 
         // This light is here to show the details in the back (no shadows)
         let backLight = new THREE.PointLight(0xcccccc, 1, 100);

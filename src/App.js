@@ -115,7 +115,7 @@ class App extends Component {
                     <div className="App">
                         <ForkMeOnGitHub/>
                         <header className="App-header">
-                            <img src={logo} className="App-logo" alt="logo"/>
+                            <img src={logo} className="App-logo" alt="Justin Lee Logo"/>
                             <div className="full-screen-message">
                                 <code>
                                     <Typed

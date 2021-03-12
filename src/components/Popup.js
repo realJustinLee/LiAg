@@ -14,7 +14,7 @@ class Popup extends Component {
                 <div className="screen abs top left">
                     <div className="popup abs">
                         <div className="img-container">
-                            <img className="abs info-logo" src={logo} alt="JustinLee Logo"/>
+                            <img className="abs info-logo" src={logo} alt="Justin Lee Logo"/>
                         </div>
                         <div className="abs message">
                             <p>{this.props.message}</p>
