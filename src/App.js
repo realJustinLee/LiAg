@@ -53,6 +53,10 @@ class App extends Component {
         this.mainStage.animate();
     };
 
+    componentDidMount() {
+        document.body.appendChild(this.mainStage.renderer.domElement);
+    }
+
     // Update the state of parent App from child Component
     updateCategory = currentCategory => {
         this.setState({currentCategory});

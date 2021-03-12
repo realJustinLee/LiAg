@@ -226,10 +226,6 @@ class MainStage {
         // Configure renderer size to fill up the whole window
         this.renderer.setSize(window.innerWidth, window.innerHeight);
 
-        // Append Renderer to DOM
-        // TODO: appendChild will append the element twice. pending node to fix.
-        document.body.appendChild(this.renderer.domElement);
-
         /** The Sky Box
          *
          * CubeTextureLoader axes different from three.js
@@ -504,9 +500,6 @@ class MainStage {
                             child.receiveShadow = true;
                         }
                     });
-
-                    console.log(this.scene.getMyObjectByName("FootR"));
-                    console.log(this.scene.getMyObjectByName("FootL"));
 
                     let resultR = minFinder.parse(this.scene.getMyObjectByName("FootR"));
                     let resultL = minFinder.parse(this.scene.getMyObjectByName("FootL"));
