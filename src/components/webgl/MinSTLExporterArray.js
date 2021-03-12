@@ -1,9 +1,8 @@
 import * as THREE from 'three';
 import {Face3, Geometry} from "three/examples/jsm/deprecated/Geometry";
+import {deprecate} from "@testing-library/jest-dom/dist/utils";
 
-import MinSTLExporter from "./MinSTLExporter";
-
-
+@deprecate
 class MinSTLExporterArray {
     parse(scene) {
         let vector = new THREE.Vector3();
