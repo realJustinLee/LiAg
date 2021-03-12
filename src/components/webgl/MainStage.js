@@ -200,6 +200,15 @@ class MainStage {
         axes.name = "axes";
         this.scene.add(axes);
 
+        // build Grid
+        let size = 50;
+        let divisions = 60;
+        let colorCenterLine = 0x306d7d;
+        let colorGrid = 0x61dafb;
+        let grid = new THREE.GridHelper(size, divisions, colorCenterLine, colorGrid);
+        grid.name = "grid";
+        this.scene.add(grid);
+
         // expose scene to DOM
         window.scene = this.scene
         window.THREE = THREE
@@ -252,7 +261,7 @@ class MainStage {
          * nz = back
          */
 
-        let path = "./img/textures/darksky/";
+        let path = "./img/textures/SwedishRoyalCastle/";
         let extension = ".jpg";
         let urls = [
             path + "px" + extension,
@@ -267,15 +276,6 @@ class MainStage {
         reflectionCube.format = THREE.RGBFormat;
         reflectionCube.mapping = THREE.CubeRefractionMapping;
         this.scene.background = reflectionCube;
-
-        let size = 50;
-        let divisions = 60;
-        let colorCenterLine = 0x306d7d;
-        let colorGrid = 0x61dafb;
-
-        let grid = new THREE.GridHelper(size, divisions, colorCenterLine, colorGrid);
-        grid.name = "grid";
-        this.scene.add(grid);
     }
 
     buildControls() {
@@ -285,7 +285,7 @@ class MainStage {
         this.controls.minDistance = 2;
         this.controls.maxDistance = 7;
         this.controls.minPolarAngle = 0;
-        this.controls.maxPolarAngle = Math.PI / 2 - 0.1;
+        this.controls.maxPolarAngle = Math.PI;
         this.controls.enablePan = false;
     }
 
