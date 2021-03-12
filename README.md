@@ -12,7 +12,7 @@ and users can export the avatars into STL files which can be used for 3D printin
 - `1.0.0`
 
 ## Platform Compatibility
-- [ ] iOS
+- [ ] iOS (No plan to support)
 - [x] iPadOS
 - [x] macOS
 - [x] Linux
@@ -40,7 +40,7 @@ The Exported STL Model
 ![The Exported STL](./extra/img/TheExportedSTL.png)
 
 ## TODO
-- [ ] Merge the `three.js` lib into the `react` project
+- [ ] Release this project to a desktop app with electron.
 
 # Made with ❤ by [Justin Lee](https://github.com/realJustinLee)!
 ™ and © 1997-2021 Justin Lee. All Rights Reserved. [License Agreement](./LICENSE)
