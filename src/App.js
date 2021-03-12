@@ -55,6 +55,8 @@ class App extends Component {
 
     componentDidMount() {
         document.body.appendChild(this.mainStage.renderer.domElement);
+        // Firefox workaround
+        document.body.appendChild(this.mainStage.link);
     }
 
     // Update the state of parent App from child Component

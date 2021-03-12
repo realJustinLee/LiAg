@@ -143,8 +143,6 @@ class MainStage {
 
         this.link = document.createElement("a");
         this.link.style.display = "none";
-        // Firefox workaround
-        document.body.appendChild(this.link);
 
         document.body.onresize = function () {
             //size of viewport
