@@ -151,4 +151,4 @@ class MinSTLExporterArray {
     }
 }
 
-export default MinSTLExporter;
+export default MinSTLExporterArray;
