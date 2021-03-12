@@ -141,11 +141,6 @@ class MainStage {
             LegL: ["FootL"]
         };
 
-        this.link = document.createElement("a");
-        this.link.style.display = "none";
-        // Firefox workaround
-        document.body.appendChild(this.link);
-
         document.body.onresize = function () {
             //size of viewport
             this.renderer.setSize(window.innerWidth, window.innerHeight);
