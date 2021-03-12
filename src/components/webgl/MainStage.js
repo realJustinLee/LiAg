@@ -482,10 +482,7 @@ class MainStage {
             let resultR = minFinder.parse(this.scene.getMyObjectByName("FootR"));
             let resultL = minFinder.parse(this.scene.getMyObjectByName("FootL"));
             let result = resultL > resultR ? resultR : resultL;
-            // console.log(result);
 
-            // bBoxStand = new THREE.Box3().setFromObject(root);
-            // topStand = bBoxStand.max.y;
             this.scene.getMyObjectByName("Torso_Hip").position.y -= result;
         } else {
             this.loader.load(
@@ -660,7 +657,6 @@ class MainStage {
     }
 
     selectedMesh(MeshType) {
-        // console.log(MeshType, selected);
         let normal = {r: 0.5, g: 0.5, b: 0.5};
 
         this.changeColor(this.selected, normal);
