@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
-import FindMinGeometry from "./FindMinGeometry";
+import MinGeometryFinder from "./MinGeometryFinder";
 import MinSTLExporter from "./MinSTLExporter";
 
 class MainStage {
@@ -479,7 +479,7 @@ class MainStage {
 
     placeStand() {
         // let topStand;
-        let minFinder = new FindMinGeometry();
+        let minFinder = new MinGeometryFinder();
 
         if (this.scene.getMyObjectByName("mesh-stand")) {
             let resultR = minFinder.parse(this.scene.getMyObjectByName("FootR"));
@@ -523,7 +523,7 @@ class MainStage {
     }
 
     changeStand(stand) {
-        let minFinder = new FindMinGeometry();
+        let minFinder = new MinGeometryFinder();
         if (this.scene.getMyObjectByName("mesh-stand")) {
             this.group.remove(this.scene.getMyObjectByName("mesh-stand"));
             this.loader.load(

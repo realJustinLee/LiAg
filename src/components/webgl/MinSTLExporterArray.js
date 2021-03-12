@@ -1,18 +1,21 @@
 import * as THREE from 'three';
+import {Face3, Geometry} from "three/examples/jsm/deprecated/Geometry";
+
 import MinSTLExporter from "./MinSTLExporter";
+
 
 class MinSTLExporterArray {
     parse(scene) {
         let vector = new THREE.Vector3();
         let normalMatrixWorld = new THREE.Matrix3();
-        let mergeGeometry = new THREE.BufferGeometry();
+        let mergeGeometry = new Geometry();
 
         scene.traverse(function (mesh) {
 
             if (mesh instanceof THREE.Mesh) {
 
                 //Geometry with skeleton displacement
-                let outputGeometry = new THREE.BufferGeometry();
+                let outputGeometry = new Geometry();
 
                 const {
                     matrixWorld,
@@ -55,7 +58,7 @@ class MinSTLExporterArray {
 
                     vector.copy(faceNormal).applyMatrix3(normalMatrixWorld).normalize();
 
-                    outputGeometry.faces.push(new THREE.Face3(a, b, c));
+                    outputGeometry.faces.push(new Face3(a, b, c));
 
                     // eslint-disable-next-line no-loop-func
                     [a, b, c].forEach(vertexIndex => {

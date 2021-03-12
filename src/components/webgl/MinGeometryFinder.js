@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-class FindMinGeometry {
+class MinGeometryFinder {
 
     parse(scene) {
         let vector = new THREE.Vector3();
@@ -104,4 +104,4 @@ class FindMinGeometry {
     }
 }
 
-export default FindMinGeometry;
+export default MinGeometryFinder;
