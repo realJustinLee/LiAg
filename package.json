@@ -13,7 +13,7 @@
     "github-fork-ribbon-css": "^0.2.3",
     "react": "^17.0.1",
     "react-contenteditable": "^3.3.5",
-    "react-device-detect": "^1.16.0",
+    "react-device-detect": "^1.17.0",
     "react-dom": "^17.0.1",
     "react-numeric-input": "^2.2.3",
     "react-scripts": "4.0.3",
