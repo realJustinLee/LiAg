@@ -48,15 +48,12 @@ class App extends Component {
             partLoading: false,
             message: "Sorry, this feature is still under development..."
         }
-        this.mainStage = new MainStage();
-        this.mainStage.init();
-        this.mainStage.animate();
     };
 
     componentDidMount() {
-        document.body.appendChild(this.mainStage.renderer.domElement);
-        // Firefox workaround
-        document.body.appendChild(this.mainStage.link);
+        this.mainStage = new MainStage();
+        this.mainStage.init();
+        this.mainStage.animate();
     }
 
     // Update the state of parent App from child Component

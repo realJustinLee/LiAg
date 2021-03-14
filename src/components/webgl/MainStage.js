@@ -143,6 +143,7 @@ class MainStage {
 
         this.link = document.createElement("a");
         this.link.style.display = "none";
+        document.body.appendChild(this.link);
 
         document.body.onresize = function () {
             //size of viewport
@@ -237,6 +238,7 @@ class MainStage {
 
         // Configure renderer size to fill up the whole window
         this.renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(this.renderer.domElement);
 
         /** The Sky Box
          *
