@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserView, MobileView} from "react-device-detect";
+import {BrowserView, MobileOnlyView, withOrientationChange} from "react-device-detect";
 import Typed from "react-typed";
 
 import logo from './logo.svg';
@@ -114,7 +114,7 @@ class App extends Component {
                         updateLoading={this.updateLoading}
                     />
                 </BrowserView>
-                <MobileView>
+                <MobileOnlyView>
                     <div className="App">
                         <ForkMeOnGitHub/>
                         <header className="App-header">
@@ -142,10 +142,12 @@ class App extends Component {
                             </a>
                         </header>
                     </div>
-                </MobileView>
+                </MobileOnlyView>
             </div>
         );
     };
 }
+
+App = withOrientationChange(App)
 
 export default App;
