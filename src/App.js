@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserView, MobileOnlyView, withOrientationChange} from "react-device-detect";
+import {CustomView, isMobileOnly, isTablet, isBrowser, withOrientationChange} from "react-device-detect";
 import Typed from "react-typed";
 
 import logo from './logo.svg';
@@ -79,7 +79,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <BrowserView>
+                <CustomView condition={isBrowser || isTablet || (isMobileOnly && this.props.isLandscape)}>
                     <PageLoader/>
                     <ForkMeOnGitHub/>
                     <Name
@@ -113,8 +113,8 @@ class App extends Component {
                         loading={this.state.partLoading}
                         updateLoading={this.updateLoading}
                     />
-                </BrowserView>
-                <MobileOnlyView>
+                </CustomView>
+                <CustomView condition={isMobileOnly && this.props.isPortrait}>
                     <div className="App">
                         <ForkMeOnGitHub/>
                         <header className="App-header">
@@ -142,7 +142,7 @@ class App extends Component {
                             </a>
                         </header>
                     </div>
-                </MobileOnlyView>
+                </CustomView>
             </div>
         );
     };
