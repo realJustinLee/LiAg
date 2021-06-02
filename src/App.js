@@ -79,7 +79,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <CustomView condition={isBrowser || isTablet || (isMobileOnly && this.props.isLandscape)}>
+                <CustomView condition={isBrowser || isTablet}>
                     <PageLoader/>
                     <ForkMeOnGitHub/>
                     <Name
@@ -114,7 +114,7 @@ class App extends Component {
                         updateLoading={this.updateLoading}
                     />
                 </CustomView>
-                <CustomView condition={isMobileOnly && this.props.isPortrait}>
+                <CustomView condition={isMobileOnly}>
                     <div className="App">
                         <ForkMeOnGitHub/>
                         <header className="App-header">
@@ -124,7 +124,7 @@ class App extends Component {
                                     <Typed
                                         strings={[
                                             "Sorry",
-                                            "This content is currently unavailable on mobile.^2000",
+                                            "This content is currently unavailable on mobile phones.^2000",
                                             "Come back soon for updates!"
                                         ]}
                                         typeSpeed={50}
