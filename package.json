@@ -6,8 +6,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^5.13.0",
-    "@testing-library/react": "^11.2.7",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.1.9",
     "axios": "^0.21.1",
     "github-fork-ribbon-css": "^0.2.3",
@@ -18,9 +18,9 @@
     "react-numeric-input": "^2.2.3",
     "react-scripts": "4.0.3",
     "react-typed": "^1.2.0",
-    "three": "^0.129.0",
-    "typescript": "^4.3.2",
-    "web-vitals": "^2.0.1"
+    "three": "^0.130.1",
+    "typescript": "^4.3.5",
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
