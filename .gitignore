@@ -78,3 +78,5 @@ typings/
 .env.production.local
 
 package-lock.json
+
+.idea
