@@ -51,9 +51,11 @@ class App extends Component {
     };
 
     componentDidMount() {
-        this.mainStage = new MainStage();
-        this.mainStage.init();
-        this.mainStage.animate();
+        if (isBrowser || isTablet) {
+            this.mainStage = new MainStage();
+            this.mainStage.init();
+            this.mainStage.animate();
+        }
     }
 
     // Update the state of parent App from child Component
