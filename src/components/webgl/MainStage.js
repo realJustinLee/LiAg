@@ -745,15 +745,15 @@ class MainStage {
             let Meshes = [
                 "mesh-stand",
                 "mesh-torso",
-                "mesh-arml",
-                "mesh-armr",
-                "mesh-footl",
-                "mesh-footr",
-                "mesh-handl",
-                "mesh-handr",
+                "mesh-arm-l",
+                "mesh-arm-r",
+                "mesh-foot-l",
+                "mesh-foot-r",
+                "mesh-hand-l",
+                "mesh-hand-r",
                 "mesh-head",
-                "mesh-legl",
-                "mesh-legr",
+                "mesh-leg-l",
+                "mesh-leg-r",
                 "mesh-neck"
             ];
             for (let i = 0; i < Meshes.length; i++) {
