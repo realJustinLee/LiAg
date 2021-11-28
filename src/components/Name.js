@@ -8,9 +8,11 @@ class Name extends Component {
 
     handleChange = (event) => {
         this.props.updateAvatarName(event.target.value);
+        window.avatarName = event.target.value;
     };
 
     render() {
+        window.avatarName = this.props.avatarName;
         // Passing thought the name state from the properties
         return (
             <ContentEditable

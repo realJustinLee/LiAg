@@ -6,6 +6,7 @@ class MinSTLExporter {
         let output = '';
         let vector = new THREE.Vector3();
         let normalMatrixWorld = new THREE.Matrix3();
+        let avatarName = window.avatarName.trim().toLowerCase().split(' ').join('-');
 
         // output += 'solid exported\n';
 
@@ -13,7 +14,7 @@ class MinSTLExporter {
 
             if (mesh instanceof THREE.Mesh) {
 
-                output += 'solid exported\n';
+                output += 'solid ' + avatarName + '\n';
 
                 const {
                     matrixWorld,
@@ -108,7 +109,7 @@ class MinSTLExporter {
                     output += '\t\tendloop\n';
                     output += '\tendfacet\n';
                 }
-                output += 'endsolid exported\n';
+                output += 'endsolid ' + avatarName + '\n';
             }
         });
         return output;

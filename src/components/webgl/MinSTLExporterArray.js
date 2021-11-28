@@ -8,6 +8,7 @@ class MinSTLExporterArray {
         let vector = new THREE.Vector3();
         let normalMatrixWorld = new THREE.Matrix3();
         let mergeGeometry = new Geometry();
+        let avatarName = window.avatarName.trim().toLowerCase().split(' ').join('-');
 
         scene.traverse(function (mesh) {
 
@@ -120,7 +121,7 @@ class MinSTLExporterArray {
         mergeGeometry.computeBoundingSphere();
 
         let output = '';
-        output += 'solid exported\n';
+        output += 'solid' + avatarName + '\n';
 
         let vertices = mergeGeometry.vertices;
         let faces = mergeGeometry.faces;
@@ -145,7 +146,7 @@ class MinSTLExporterArray {
             output += '\t\tendloop\n';
             output += '\tendfacet\n';
         }
-        output += 'endsolid exported\n';
+        output += 'endsolid ' + avatarName + '\n';
         return output;
     }
 }
