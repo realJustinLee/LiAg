@@ -275,7 +275,7 @@ class MainStage {
         ];
 
         let reflectionCube = new THREE.CubeTextureLoader().load(urls);
-        reflectionCube.format = THREE.RGBFormat;
+        reflectionCube.format = THREE.RGBAFormat;
         reflectionCube.mapping = THREE.CubeRefractionMapping;
         this.scene.background = reflectionCube;
     }
