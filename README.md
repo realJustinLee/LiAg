@@ -7,9 +7,9 @@ and users can export the avatars into STL files which can be used for 3D printin
 
 ## Requirements
 
-> - node.js `v18.1.0`
-> - react.js `18.1.0`
-> - three.js `0.139.2`
+> - node.js `v18.8.0`
+> - react.js `18.2.0`
+> - three.js `0.144.0`
 
 ## Version
 
