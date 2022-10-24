@@ -30,8 +30,9 @@ Run the following code in the terminal to install and run the project.
 ```
 git clone https://github.com/realJustinLee/LiAg.git
 cd LiAg
-npm run reinstall
-npm start
+npm run rebuild
+npm install -g serve
+serve -s build
 ```
 
 ## Screen Shots
