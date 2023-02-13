@@ -28,11 +28,11 @@ class Footer extends Component {
                 <div className="love-author abs bottom">
                     <button onClick={() => {
                         const content = <span>
-                            Author: <a href="https://www.linkedin.com/in/li-xin-justin/"
+                            Author: <a href="https://www.linkedin.com/in/justin-xin-li/"
                                        target="_blank" rel="noopener noreferrer">Justin Lee</a>
                             <br/>
-                            E-Mail: <a href="mailto:JustinDellAdam@live.com"
-                                       target="_blank" rel="noopener noreferrer">JustinDellAdam@live.com</a>
+                            E-Mail: <a href="mailto:justindelladam@live.com"
+                                       target="_blank" rel="noopener noreferrer">justindelladam@live.com</a>
                             <br/>
                             GitHub: <a href="https://github.com/realJustinLee"
                                        target="_blank" rel="noopener noreferrer">https://github.com/realJustinLee</a>
