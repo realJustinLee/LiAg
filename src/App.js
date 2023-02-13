@@ -19,6 +19,7 @@ import Buttons from "./components/Buttons";
 import Popup from "./components/Popup";
 import Category from "./components/Category";
 import PartLoader from "./components/PartLoader";
+import MyTyped from "./components/MyTyped";
 
 
 class App extends Component {
@@ -122,9 +123,18 @@ class App extends Component {
                             <img src={logo} className="App-logo" alt="Justin Lee Logo"/>
                             <div className="full-screen-message">
                                 <code>
-                                    Sorry,<br/>
-                                    This content is currently unavailable on mobile phones.<br/>
-                                    Come back soon for updates!
+                                    <MyTyped
+                                        options={{
+                                            strings: [
+                                                "Sorry.",
+                                                "This content is currently unavailable on mobile devices.^2000",
+                                                "Come back soon for updates!"
+                                            ],
+                                            typeSpeed: 50,
+                                            backSpeed: 50,
+                                            showCursor: true,
+                                        }}
+                                    />
                                 </code>
                             </div>
                             <a

@@ -110,3 +110,7 @@ CONTENTS:
 textarea, select, input, button {
     outline: none;
 }
+
+.my-typed {
+    overflow-wrap: normal;
+}
