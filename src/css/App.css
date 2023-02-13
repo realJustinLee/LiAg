@@ -107,10 +107,10 @@ CONTENTS:
     z-index: 5000;
 }
 
-textarea, select, input, button {
-    outline: none;
-}
-
 .my-typed {
     overflow-wrap: normal;
+}
+
+textarea, select, input, button {
+    outline: none;
 }
