@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {CustomView, isMobileOnly, isTablet, isBrowser, withOrientationChange} from "react-device-detect";
-import Typed from "react-typed";
 
 import logo from './logo.svg';
 import './css/App.css';
@@ -123,15 +122,9 @@ class App extends Component {
                             <img src={logo} className="App-logo" alt="Justin Lee Logo"/>
                             <div className="full-screen-message">
                                 <code>
-                                    <Typed
-                                        strings={[
-                                            "Sorry",
-                                            "This content is currently unavailable on mobile phones.^2000",
-                                            "Come back soon for updates!"
-                                        ]}
-                                        typeSpeed={50}
-                                        showCursor={true}
-                                    />
+                                    Sorry,<br/>
+                                    This content is currently unavailable on mobile phones.<br/>
+                                    Come back soon for updates!
                                 </code>
                             </div>
                             <a
