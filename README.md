@@ -13,7 +13,7 @@ and users can export the avatars into STL files which can be used for 3D printin
 
 ## Version
 
-- `1.0.2`
+- `1.1.0`
 
 ## Platform Compatibility
 
