@@ -12,7 +12,7 @@ import MainStage from "./components/webgl/MainStage";
 
 // Loading components
 import PageLoader from "./components/PageLoader";
-import ForkMeOnGitHub from "./components/ForlMeOnGitHub";
+import ForkMeOnGitHub from "./components/ForkMeOnGitHub";
 import Name from "./components/Name";
 import Footer from "./components/Footer";
 import Buttons from "./components/Buttons";
