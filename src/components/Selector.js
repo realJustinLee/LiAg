@@ -34,7 +34,6 @@ class Selector extends Component {
     };
 
     componentDidMount() {
-        console.log(this.notInited);
         if (this.notInited === true) {
             // Load the base model with defaultMeshes and defaultPose
             axios.get("./models/poses/default.json").then(res => {
