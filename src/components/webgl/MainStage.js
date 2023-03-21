@@ -13,7 +13,9 @@ class MainStage {
         this.loader = null;
 
         this.selected = "Head";
-        this.highLightColor = {r: 0.41, g: 0.51, b: 0.56};
+        this.highLightColor = {r: 0.45, g: 0.50, b: 0.55};
+        this.normalColor = {r: 0.5, g: 0.5, b: 0.5}
+        this.standColor = {r: 0.4, g: 0.4, b: 0.4}
 
         // This group will contain all the meshes but not the floor, the lights etc...
         this.group = new THREE.Group();
@@ -174,8 +176,8 @@ class MainStage {
         this.loader = new GLTFLoader();
         this.scene = new THREE.Scene();
         this.scene.name = "scene"
-        this.scene.background = new THREE.Color(40, 44, 52);
-        this.scene.fog = new THREE.Fog(0x282c34, 1, 20);
+        this.scene.background = new THREE.Color(80, 80, 80);
+        this.scene.fog = new THREE.Fog(0x222222, 1, 20);
         this.scene.add(this.group);
         this.scene.getMyObjectByName = function (name) {
             if (name === "Torso_Shoulder_L") {
@@ -378,6 +380,7 @@ class MainStage {
     ) {
         // partCategory : {arm, head, hand, torso, leg, foot}
         // meshType : {ArmR, ArmL, Head, HandR, HandL, LegR, LegL, FootR, FootL, Torso}
+        let normalColor = this.normalColor;
         this.loader.load(
             "./models/" + partCategory + "/" + meshFileName + ".glb",
             glTF => {
@@ -387,7 +390,7 @@ class MainStage {
                         // Gives a fixed name to the mesh and same gray color
                         child.name = "mesh-" + meshType.toLowerCase();
                         child.castShadow = true;
-                        child.material.color = {r: 0.5, g: 0.5, b: 0.5};
+                        child.material.color = normalColor;
                     }
                 });
 
@@ -481,6 +484,7 @@ class MainStage {
 
     loadStand(stand) {
         let minFinder = new MinGeometryFinder();
+        let standColor = this.standColor;
         this.loader.load(
             "./models/stand/" + stand + ".glb",
             glTF => {
@@ -491,7 +495,7 @@ class MainStage {
                         child.name = "mesh-stand";
                         child.castShadow = true;
                         child.receiveShadow = true;
-                        child.material.color = {r: 0.4, g: 0.4, b: 0.4};
+                        child.material.color = standColor;
                     }
                 });
 
@@ -501,7 +505,7 @@ class MainStage {
 
                 //Default color to all the meshes
                 if (loadedContentRoot.material) {
-                    loadedContentRoot.material.color = {r: 0.4, g: 0.4, b: 0.4};
+                    loadedContentRoot.material.color = standColor;
                 }
 
                 this.group.add(loadedContentRoot);
@@ -640,13 +644,15 @@ class MainStage {
         });
     }
 
-    selectedMesh(MeshType) {
-        let normal = {r: 0.5, g: 0.5, b: 0.5};
+    selectedMesh(meshType) {
+        if (this.selected === "mesh-stand") {
+            this.changeColor(this.selected, this.standColor);
 
-        this.changeColor(this.selected, normal);
-        this.changeColor(MeshType, this.highLightColor);
-
-        this.selected = MeshType;
+        } else {
+            this.changeColor(this.selected, this.normalColor);
+        }
+        this.changeColor(meshType, this.highLightColor);
+        this.selected = meshType;
     };
 
     getRotation(bone_name) {
@@ -676,8 +682,8 @@ class MainStage {
 
     loadPose(poseData, bones) {
         let L, R = false;
-        for (let i = 0; i < bones.length; i++) {
-            let bone = bones[i].bone;
+        for (const boneElem of bones) {
+            let bone = boneElem.bone;
             window.changeRotation(bone, poseData[bone].x, "x");
             window.changeRotation(bone, poseData[bone].y, "y");
             window.changeRotation(bone, poseData[bone].z, "z");
@@ -721,7 +727,7 @@ class MainStage {
         } else {
             let stlList = [];
             // I need to know in which order the files are exported...
-            let Meshes = [
+            let meshes = [
                 "mesh-stand",
                 "mesh-torso",
                 "mesh-arm-l",
@@ -735,9 +741,9 @@ class MainStage {
                 "mesh-leg-r",
                 "mesh-neck"
             ];
-            for (let i = 0; i < Meshes.length; i++) {
+            for (const mesh of meshes) {
                 this.group.traverse(function (child) {
-                    if (child.name === Meshes[i]) {
+                    if (child.name === mesh) {
                         stlList.push(exporter.parse(child))
                     }
                 });
