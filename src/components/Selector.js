@@ -34,7 +34,7 @@ class Selector extends Component {
 
     componentDidMount() {
         // Load the base model with defaultMeshes and defaultPose
-        axios.get("./models/poses/default.json").then(res => {
+        axios.get("./models/poses/running.json").then(res => {
             this.setState({pose: res.data});
             window.loadDefaultMeshes(bones, res.data);
         });
@@ -82,38 +82,31 @@ class Selector extends Component {
         const isLeft = this.props.isLeft;
         let library;
         let sideIndicator;
-        let meshType;
 
         switch (category) {
             case "head":
                 library = headElements;
                 sideIndicator = false;
-                meshType = "Head";
                 break;
             case "hand":
                 library = handElements;
                 sideIndicator = true;
-                meshType = isLeft ? "HandL" : "HandR";
                 break;
             case "arm":
                 library = armElements;
                 sideIndicator = true;
-                meshType = isLeft ? "ArmL" : "ArmR";
                 break;
             case "torso":
                 library = torsoElements;
                 sideIndicator = false;
-                meshType = "Torso";
                 break;
             case "foot":
                 library = footElements;
                 sideIndicator = true;
-                meshType = isLeft ? "FootL" : "FootR";
                 break;
             case "leg":
                 library = legElements;
                 sideIndicator = true;
-                meshType = isLeft ? "LegL" : "LegR";
                 break;
             case "pose":
                 library = poseElements;
@@ -239,31 +232,31 @@ class Selector extends Component {
                     }
                     onClick={() => {
                         this.props.updateLeft(true);
-                        let MeshType;
+                        let meshType;
                         switch (category) {
                             case "head":
-                                MeshType = "Head";
+                                meshType = "Head";
                                 break;
                             case "hand":
-                                MeshType = "HandL";
+                                meshType = "HandL";
                                 break;
                             case "arm":
-                                MeshType = "ArmL";
+                                meshType = "ArmL";
                                 break;
                             case "torso":
-                                MeshType = "Torso";
+                                meshType = "Torso";
                                 break;
                             case "foot":
-                                MeshType = "FootL";
+                                meshType = "FootL";
                                 break;
                             case "leg":
-                                MeshType = "LegL";
+                                meshType = "LegL";
                                 break;
                             default:
-                                MeshType = undefined;
+                                meshType = undefined;
                         }
-                        if (MeshType) {
-                            window.selectedMesh(MeshType);
+                        if (meshType) {
+                            window.selectedMesh(meshType);
                         }
                     }}
                 >
@@ -276,31 +269,31 @@ class Selector extends Component {
                     }
                     onClick={() => {
                         this.props.updateLeft(false);
-                        let MeshType;
+                        let meshType;
                         switch (category) {
                             case "head":
-                                MeshType = "Head";
+                                meshType = "Head";
                                 break;
                             case "hand":
-                                MeshType = "HandR";
+                                meshType = "HandR";
                                 break;
                             case "arm":
-                                MeshType = "ArmR";
+                                meshType = "ArmR";
                                 break;
                             case "torso":
-                                MeshType = "Torso";
+                                meshType = "Torso";
                                 break;
                             case "foot":
-                                MeshType = "FootR";
+                                meshType = "FootR";
                                 break;
                             case "leg":
-                                MeshType = "LegR";
+                                meshType = "LegR";
                                 break;
                             default:
-                                MeshType = undefined;
+                                meshType = undefined;
                         }
-                        if (MeshType) {
-                            window.selectedMesh(MeshType);
+                        if (meshType) {
+                            window.selectedMesh(meshType);
                         }
                     }}
                 >

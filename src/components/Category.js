@@ -41,45 +41,45 @@ class Category extends Component {
                         key={i}
                         onClick={() => {
                             this.props.updateCategory(name);
-                            let MeshType = undefined;
+                            let meshType = undefined;
                             switch (name) {
                                 case "head":
-                                    MeshType = "Head";
+                                    meshType = "Head";
                                     break;
                                 case "hand":
-                                    MeshType = this.state.isLeft
+                                    meshType = this.state.isLeft
                                         ? "HandL"
                                         : "HandR";
                                     break;
                                 case "arm":
-                                    MeshType = this.state.isLeft
+                                    meshType = this.state.isLeft
                                         ? "ArmL"
                                         : "ArmR";
                                     break;
                                 case "torso":
-                                    MeshType = "Torso";
+                                    meshType = "Torso";
                                     break;
                                 case "foot":
-                                    MeshType = this.state.isLeft
+                                    meshType = this.state.isLeft
                                         ? "FootL"
                                         : "FootR";
                                     break;
                                 case "leg":
-                                    MeshType = this.state.isLeft
+                                    meshType = this.state.isLeft
                                         ? "LegL"
                                         : "LegR";
                                     break;
                                 case "pose":
-                                    MeshType = "pose";
+                                    meshType = "pose";
                                     break;
                                 case "stand":
-                                    MeshType = "mesh-stand";
+                                    meshType = "mesh-stand";
                                     break;
                                 default:
-                                    MeshType = undefined;
+                                    meshType = undefined;
                             }
-                            if (MeshType) {
-                                window.selectedMesh(MeshType);
+                            if (meshType) {
+                                window.selectedMesh(meshType);
                             }
                         }}
                     >
