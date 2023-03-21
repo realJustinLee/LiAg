@@ -34,7 +34,7 @@ class Selector extends Component {
 
     componentDidMount() {
         // Load the base model with defaultMeshes and defaultPose
-        axios.get("./models/poses/running.json").then(res => {
+        axios.get("./models/poses/default.json").then(res => {
             this.setState({pose: res.data});
             window.loadDefaultMeshes(bones, res.data);
         });
