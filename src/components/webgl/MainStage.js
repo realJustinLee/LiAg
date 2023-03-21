@@ -187,7 +187,7 @@ class MainStage {
             return this.scene.getObjectByName(name);
         }.bind(this);
 
-        // this.buildDevHelper();
+        this.buildDevHelper();
         this.buildCamera();
         this.buildRenderer();
         this.buildControls();
@@ -197,15 +197,15 @@ class MainStage {
 
     buildDevHelper() {
         // build Axes
-        let axes = new THREE.AxesHelper(2);
+        let axes = new THREE.AxesHelper(10);
         axes.name = "axes";
         this.scene.add(axes);
 
         // build Grid
         let size = 50;
         let divisions = 60;
-        let colorCenterLine = 0x306d7d;
-        let colorGrid = 0x61dafb;
+        let colorCenterLine = 0x999999;
+        let colorGrid = 0xffffff;
         let grid = new THREE.GridHelper(size, divisions, colorCenterLine, colorGrid);
         grid.name = "grid";
         this.scene.add(grid);
