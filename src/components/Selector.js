@@ -126,7 +126,7 @@ class Selector extends Component {
             default:
                 library = headElements;
                 sideIndicator = false;
-                console.log(meshType)
+                console.log(category)
         }
 
         let filteredLibrary = library.filter(
