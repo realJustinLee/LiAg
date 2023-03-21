@@ -34,15 +34,15 @@ class Editor extends Component {
     }
 
     componentDidMount() {
-        for (let i = 0; i < bones.length; i++) {
-            let bone = bones[i].bone;
+        for (const boneElem of bones) {
+            let bone = boneElem.bone;
             this.setState({[bone]: window.getRotation(bone)})
         }
     }
 
     exportPose() {
-        for (let i = 0; i < bones.length; i++) {
-            let bone = bones[i].bone;
+        for (const boneElem of bones) {
+            let bone = boneElem.bone;
             model[bone] = this.state[bone];
         }
         let model_json_str = JSON.stringify(model);
