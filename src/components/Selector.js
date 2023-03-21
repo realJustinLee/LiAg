@@ -41,12 +41,10 @@ class Selector extends Component {
     }
 
     applyPose(file) {
-        let poseData;
         //Ajax in react
         axios.get("./models/poses/" + file + ".json").then(res => {
-            poseData = res.data;
-            this.setState({pose: poseData});
-            window.loadPose(poseData, bones);
+            this.setState({pose: res.data});
+            window.loadPose(res.data, bones);
         });
     }
 

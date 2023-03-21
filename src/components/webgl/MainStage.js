@@ -13,7 +13,7 @@ class MainStage {
         this.loader = null;
 
         this.selected = "Head";
-        this.color = {r: 0.41, g: 0.51, b: 0.56};
+        this.highLightColor = {r: 0.41, g: 0.51, b: 0.56};
 
         // This group will contain all the meshes but not the floor, the lights etc...
         this.group = new THREE.Group();
@@ -81,52 +81,52 @@ class MainStage {
         // List of information on the meshes (attach points, body groups, etc...)
         this.meshStaticInfo = {
             Torso: {
-                bodyPart: "torso",
+                partCategory: "torso",
                 parentAttachment: undefined,
                 childAttachment: undefined
             },
             Head: {
-                bodyPart: "head",
+                partCategory: "head",
                 parentAttachment: "Torso_Neck",
                 childAttachment: "Head_Neck"
             },
             ArmR: {
-                bodyPart: "arm",
+                partCategory: "arm",
                 parentAttachment: "Torso_UpperArm_R",
                 childAttachment: "ArmR_UpperArm_R"
             },
             ArmL: {
-                bodyPart: "arm",
+                partCategory: "arm",
                 parentAttachment: "Torso_UpperArm_L",
                 childAttachment: "ArmL_UpperArm_L"
             },
             HandR: {
-                bodyPart: "hand",
+                partCategory: "hand",
                 parentAttachment: "ArmR_Hand_R",
                 childAttachment: "HandR_Hand_R"
             },
             HandL: {
-                bodyPart: "hand",
+                partCategory: "hand",
                 parentAttachment: "ArmL_Hand_L",
                 childAttachment: "HandL_Hand_L"
             },
             LegR: {
-                bodyPart: "leg",
+                partCategory: "leg",
                 parentAttachment: "Torso_UpperLeg_R",
                 childAttachment: "LegR_UpperLeg_R"
             },
             LegL: {
-                bodyPart: "leg",
+                partCategory: "leg",
                 parentAttachment: "Torso_UpperLeg_L",
                 childAttachment: "LegL_UpperLeg_L"
             },
             FootR: {
-                bodyPart: "foot",
+                partCategory: "foot",
                 parentAttachment: "LegR_Foot_R",
                 childAttachment: "FootR_Foot_R"
             },
             FootL: {
-                bodyPart: "foot",
+                partCategory: "foot",
                 parentAttachment: "LegL_Foot_L",
                 childAttachment: "FootL_Foot_L"
             }
@@ -292,7 +292,7 @@ class MainStage {
     }
 
     buildLights() {
-        //hemisphere light: like sun light but without any shadows
+        //hemisphere light: like sunlight but without any shadows
         let hemisphereLight = new THREE.HemisphereLight(0xffffff, 0xffffff);
         hemisphereLight.name = "hemisphereLight";
         this.scene.add(hemisphereLight);
@@ -365,54 +365,54 @@ class MainStage {
     }
 
     placeMesh(
-        meshName,
-        bodyPartClass,
-        MeshType,
+        meshFileName,
+        partCategory,
+        meshType,
         parentAttachment,
         childAttachment,
         rotation,
-        firstLoad,
-        highLight,
+        isFirstLoad,
+        isHighLighted,
         bones,
         poseData
     ) {
-        // bodyPartClass : {arm, head, hand, torso, leg, foot}
-        // MeshType : {ArmR, ArmL, Head, HandR, HandL, LegR, LegL, FootR, FootL, Torso}
+        // partCategory : {arm, head, hand, torso, leg, foot}
+        // meshType : {ArmR, ArmL, Head, HandR, HandL, LegR, LegL, FootR, FootL, Torso}
         this.loader.load(
-            "./models/" + bodyPartClass + "/" + meshName + ".glb",
+            "./models/" + partCategory + "/" + meshFileName + ".glb",
             glTF => {
-                let root = glTF.scene.children[0];
-                root.traverse(function (child) {
+                let loadedContentRoot = glTF.scene.children[0];
+                loadedContentRoot.traverse(function (child) {
                     if (child instanceof THREE.Mesh) {
                         // Gives a fixed name to the mesh and same gray color
-                        child.name = "mesh-" + MeshType.toLowerCase();
+                        child.name = "mesh-" + meshType.toLowerCase();
                         child.castShadow = true;
                         child.material.color = {r: 0.5, g: 0.5, b: 0.5};
                     }
                 });
 
                 // Fix naming errors in modeling (errors in glb).
-                root.name = MeshType;
+                loadedContentRoot.name = meshType;
 
                 // group is one element with all the meshes and bones of the character
-                this.group.add(root);
+                this.group.add(loadedContentRoot);
                 this.scene.updateMatrixWorld(true);
 
                 // Updates the loadedMeshes variable (used for replacing children)changeColor
-                this.loadedMeshes[MeshType].name = meshName;
-                this.loadedMeshes[MeshType].rotation = rotation;
+                this.loadedMeshes[meshType].name = meshFileName;
+                this.loadedMeshes[meshType].rotation = rotation;
 
-                if (MeshType === "Head" && firstLoad) {
-                    this.changeColor("Head", this.color);
+                if (meshType === "Head" && isFirstLoad) {
+                    this.changeColor("Head", this.highLightColor);
                 }
 
-                if (highLight) {
-                    this.changeColor(MeshType, this.color);
+                if (isHighLighted) {
+                    this.changeColor(meshType, this.highLightColor);
                 }
 
                 // Putting the new mesh in the pose configuration if any pose as been selected
                 if (poseData) {
-                    root.traverse(function (child) {
+                    loadedContentRoot.traverse(function (child) {
                         if (child instanceof THREE.Bone) {
                             if (poseData[child.name]) {
                                 window.changeRotation(child.name, poseData[child.name].x, "x");
@@ -436,19 +436,19 @@ class MainStage {
                 }
 
                 //Going to look for all children of current mesh
-                let children = this.childrenList[MeshType];
+                let children = this.childrenList[meshType];
                 if (children) {
-                    for (let i = 0; i < children.length; i++) {
-                        this.replaceMesh(children[i], firstLoad, bones, poseData);
+                    for (const child of children) {
+                        this.refreshMesh(child, isFirstLoad, bones, poseData);
                     }
                 }
 
-                if (MeshType === "FootR") {
+                if (meshType === "FootR") {
                     if (this.scene.getMyObjectByName("FootL_Toes_L")) {
                         this.scene.updateMatrixWorld();
                         this.placeStand();
                     }
-                } else if (MeshType === "FootL") {
+                } else if (meshType === "FootL") {
                     if (this.scene.getMyObjectByName("FootR_Toes_R")) {
                         this.scene.updateMatrixWorld();
                         this.placeStand();
@@ -463,24 +463,59 @@ class MainStage {
         );
     }
 
-    replaceMesh(MeshType, firstLoad, bones, poseData) {
-        this.group.remove(this.group.getMyObjectByName(MeshType));
+    refreshMesh(meshType, isFirstLoad, bones, poseData) {
+        this.group.remove(this.group.getMyObjectByName(meshType));
         this.placeMesh(
-            this.loadedMeshes[MeshType].name,
-            this.meshStaticInfo[MeshType].bodyPart,
-            MeshType,
-            this.meshStaticInfo[MeshType].parentAttachment,
-            this.meshStaticInfo[MeshType].childAttachment,
-            this.loadedMeshes[MeshType].rotation,
-            firstLoad,
+            this.loadedMeshes[meshType].name,
+            this.meshStaticInfo[meshType].partCategory,
+            meshType,
+            this.meshStaticInfo[meshType].parentAttachment,
+            this.meshStaticInfo[meshType].childAttachment,
+            this.loadedMeshes[meshType].rotation,
+            isFirstLoad,
             false,
             bones,
             poseData
         );
     }
 
+    loadStand(stand) {
+        let minFinder = new MinGeometryFinder();
+        this.loader.load(
+            "./models/stand/" + stand + ".glb",
+            glTF => {
+                let loadedContentRoot = glTF.scene.children[0];
+
+                loadedContentRoot.traverse(function (child) {
+                    if (child instanceof THREE.Mesh) {
+                        child.name = "mesh-stand";
+                        child.castShadow = true;
+                        child.receiveShadow = true;
+                        child.material.color = {r: 0.4, g: 0.4, b: 0.4};
+                    }
+                });
+
+                let resultR = minFinder.parse(this.scene.getMyObjectByName("FootR"));
+                let resultL = minFinder.parse(this.scene.getMyObjectByName("FootL"));
+                let result = resultL > resultR ? resultR : resultL;
+
+                //Default color to all the meshes
+                if (loadedContentRoot.material) {
+                    loadedContentRoot.material.color = {r: 0.4, g: 0.4, b: 0.4};
+                }
+
+                this.group.add(loadedContentRoot);
+                this.scene.getMyObjectByName("Torso_Hip").position.y -= result;
+                window.loaded = true;
+            },
+            null,
+            function (error) {
+                console.log(error);
+            }
+        );
+    }
+
     placeStand() {
-        // let topStand;
         let minFinder = new MinGeometryFinder();
 
         if (this.scene.getMyObjectByName("mesh-stand")) {
@@ -490,77 +525,21 @@ class MainStage {
 
             this.scene.getMyObjectByName("Torso_Hip").position.y -= result;
         } else {
-            this.loader.load(
-                "./models/stand/circle.glb",
-                glTF => {
-                    let root = glTF.scene.children[0];
-
-                    root.traverse(function (child) {
-                        if (child instanceof THREE.Mesh) {
-                            child.name = "mesh-stand";
-                            child.castShadow = true;
-                            child.receiveShadow = true;
-                        }
-                    });
-
-                    let resultR = minFinder.parse(this.scene.getMyObjectByName("FootR"));
-                    let resultL = minFinder.parse(this.scene.getMyObjectByName("FootL"));
-                    let result = resultL > resultR ? resultR : resultL;
-
-                    //Default color to all the meshes
-                    if (root.material) {
-                        root.material.color = {r: 0.5, g: 0.5, b: 0.5};
-                    }
-
-                    this.group.add(root);
-                    this.scene.getMyObjectByName("Torso_Hip").position.y -= result;
-                    window.loaded = true;
-                },
-                null,
-                function (error) {
-                    console.log(error);
-                }
-            );
+            this.loadStand("circle");
         }
     }
 
     changeStand(stand) {
-        let minFinder = new MinGeometryFinder();
         if (this.scene.getMyObjectByName("mesh-stand")) {
             this.group.remove(this.scene.getMyObjectByName("mesh-stand"));
-            this.loader.load(
-                "models/stand/" + stand + ".glb",
-                glTF => {
-                    let root = glTF.scene.children[0];
-
-                    root.traverse(function (child) {
-                        if (child instanceof THREE.Mesh) {
-                            child.name = "mesh-stand";
-                            child.castShadow = true;
-                            child.receiveShadow = true;
-                            child.material.color = {r: 0.41, g: 0.51, b: 0.56};
-                        }
-                    });
-
-                    let resultR = minFinder.parse(this.scene.getMyObjectByName("FootR"));
-                    let resultL = minFinder.parse(this.scene.getMyObjectByName("FootL"));
-                    let result = resultL > resultR ? resultR : resultL;
-
-                    this.group.add(root);
-                    this.scene.getMyObjectByName("Torso_Hip").position.y -= result;
-                },
-                null,
-                function (error) {
-                    console.log(error);
-                }
-            );
+            this.loadStand(stand);
         }
     };
 
     loadDefaultMeshes(bones, poseData) {
         this.placeMesh(
             this.loadedMeshes["Torso"].name,
-            this.meshStaticInfo["Torso"].bodyPart,
+            this.meshStaticInfo["Torso"].partCategory,
             "Torso",
             undefined,
             undefined,
@@ -572,41 +551,41 @@ class MainStage {
         );
     };
 
-    changeMesh(bodyPart, part, isLeft, bones, poseData) {
+    changeMesh(category, part, isLeft, bones, poseData) {
         window.partloaded = false;
         let meshType;
-        let file;
+        let meshFileName;
         let rotation;
 
-        switch (bodyPart) {
+        switch (category) {
             case "torso":
-                file = part.file;
+                meshFileName = part.file;
                 rotation = undefined;
                 meshType = "Torso";
                 break;
             case "head":
-                file = part.file;
+                meshFileName = part.file;
                 rotation = part.rotation;
                 meshType = "Head";
                 break;
             case "hand":
                 meshType = isLeft ? "HandL" : "HandR";
-                file = isLeft ? part.file[0] : part.file[1];
+                meshFileName = isLeft ? part.file[0] : part.file[1];
                 rotation = isLeft ? part.rotation[0] : part.rotation[1];
                 break;
             case "arm":
                 meshType = isLeft ? "ArmL" : "ArmR";
-                file = isLeft ? part.file[0] : part.file[1];
+                meshFileName = isLeft ? part.file[0] : part.file[1];
                 rotation = isLeft ? part.rotation[0] : part.rotation[1];
                 break;
             case "foot":
                 meshType = isLeft ? "FootL" : "FootR";
-                file = isLeft ? part.file[0] : part.file[1];
+                meshFileName = isLeft ? part.file[0] : part.file[1];
                 rotation = isLeft ? part.rotation[0] : part.rotation[1];
                 break;
             case "leg":
                 meshType = isLeft ? "LegL" : "LegR";
-                file = isLeft ? part.file[0] : part.file[1];
+                meshFileName = isLeft ? part.file[0] : part.file[1];
                 rotation = isLeft ? part.rotation[0] : part.rotation[1];
                 break;
             default:
@@ -614,29 +593,29 @@ class MainStage {
         }
 
         if (meshType) {
-            let parentAttachment = this.meshStaticInfo[meshType].parentAttachment;
-            let childAttachment = this.meshStaticInfo[meshType].childAttachment;
+            let parentAttachmentName = this.meshStaticInfo[meshType].parentAttachment;
+            let childAttachmentName = this.meshStaticInfo[meshType].childAttachment;
             let currentMesh = this.group.getMyObjectByName(meshType);
-            let bonesToDelete =
+            let parentAttachmentMesh =
                 meshType === "Torso"
                     ? this.scene.getMyObjectByName("Torso_Hip")
-                    : this.group.getMyObjectByName(parentAttachment);
+                    : this.group.getMyObjectByName(parentAttachmentName);
 
             if (currentMesh) {
                 this.group.remove(currentMesh);
-                if (bonesToDelete.children) {
-                    for (let i = 0; i < bonesToDelete.children.length; i++) {
-                        if (bonesToDelete.children[i] instanceof THREE.Bone) {
-                            bonesToDelete.remove(bonesToDelete.children[i]);
+                if (parentAttachmentMesh.children) {
+                    for (const child of parentAttachmentMesh.children) {
+                        if (child instanceof THREE.Bone) {
+                            parentAttachmentMesh.remove(child);
                         }
                     }
                 }
                 this.placeMesh(
-                    file,
-                    bodyPart,
+                    meshFileName,
+                    category,
                     meshType,
-                    parentAttachment,
-                    childAttachment,
+                    parentAttachmentName,
+                    childAttachmentName,
                     rotation,
                     false,
                     true,
@@ -665,7 +644,7 @@ class MainStage {
         let normal = {r: 0.5, g: 0.5, b: 0.5};
 
         this.changeColor(this.selected, normal);
-        this.changeColor(MeshType, this.color);
+        this.changeColor(MeshType, this.highLightColor);
 
         this.selected = MeshType;
     };
