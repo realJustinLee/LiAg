@@ -187,7 +187,7 @@ class MainStage {
             return this.scene.getObjectByName(name);
         }.bind(this);
 
-        this.buildDevHelper();
+        // this.buildDevHelper();
         this.buildCamera();
         this.buildRenderer();
         this.buildControls();
