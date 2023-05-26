@@ -1,6 +1,6 @@
 {
   "name": "liag",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -9,7 +9,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
-    "axios": "^1.3.4",
+    "axios": "^1.4.0",
     "github-fork-ribbon-css": "^0.2.3",
     "react": "^18.2.0",
     "react-contenteditable": "^3.3.7",
@@ -17,10 +17,10 @@
     "react-dom": "^18.2.0",
     "react-numeric-input": "^2.2.3",
     "react-scripts": "^5.0.1",
-    "three": "^0.151.2",
+    "three": "^0.152.2",
     "typed.js": "^2.0.132",
     "typescript": "^4.9.5",
-    "web-vitals": "^3.3.0"
+    "web-vitals": "^3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
