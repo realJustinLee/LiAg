@@ -13,7 +13,7 @@ class MainStage {
         this.loader = null;
 
         this.selected = "Head";
-        this.highLightColor = {r: 0.45, g: 0.50, b: 0.55};
+        this.highLightColor = {r: 0.4, g: 0.5, b: 0.6};
         this.normalColor = {r: 0.5, g: 0.5, b: 0.5}
         this.standColor = {r: 0.4, g: 0.4, b: 0.4}
 
@@ -380,7 +380,6 @@ class MainStage {
     ) {
         // partCategory : {arm, head, hand, torso, leg, foot}
         // meshType : {ArmR, ArmL, Head, HandR, HandL, LegR, LegL, FootR, FootL, Torso}
-        let normalColor = this.normalColor;
         this.loader.load(
             "./models/" + partCategory + "/" + meshFileName + ".glb",
             glTF => {
@@ -390,7 +389,7 @@ class MainStage {
                         // Gives a fixed name to the mesh and same gray color
                         child.name = "mesh-" + meshType.toLowerCase();
                         child.castShadow = true;
-                        child.material.color = normalColor;
+                        child.material.color = {r: 0.5, g: 0.5, b: 0.5};
                     }
                 });
 
@@ -647,7 +646,6 @@ class MainStage {
     selectedMesh(meshType) {
         if (this.selected === "mesh-stand") {
             this.changeColor(this.selected, this.standColor);
-
         } else {
             this.changeColor(this.selected, this.normalColor);
         }
