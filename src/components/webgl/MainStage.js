@@ -294,13 +294,14 @@ class MainStage {
     }
 
     buildLights() {
+        let pi = Math.PI
         //hemisphere light: like sunlight but without any shadows
-        let hemisphereLight = new THREE.HemisphereLight(0xffffff, 0xffffff);
+        let hemisphereLight = new THREE.HemisphereLight(0xffffff, 0xffffff, pi);
         hemisphereLight.name = "hemisphereLight";
         this.scene.add(hemisphereLight);
 
         //Create a PointLight and turn on shadows for the light
-        let pointLight = new THREE.PointLight(0xcccccc, 1, 100);
+        let pointLight = new THREE.PointLight(0xcccccc, 2 * pi, 100);
         pointLight.name = "pointLight";
         pointLight.position.set(2, 3, 3);
         pointLight.castShadow = true;
@@ -313,7 +314,7 @@ class MainStage {
         this.scene.add(pointLight);
 
         // This light is here to show the details in the back (no shadows)
-        let backLight = new THREE.PointLight(0xcccccc, 1, 100);
+        let backLight = new THREE.PointLight(0xcccccc, 2 * pi, 100);
         backLight.name = "backLight";
         backLight.position.set(0, 1, -3);
         backLight.penumbra = 2;
