@@ -1,22 +1,20 @@
-import React, {Component} from "react";
+import React from "react";
 
 // Loading Assets (SubComponents & CSS)
 import '../css/Buttons.css';
 
-export default class Buttons extends Component {
-    render() {
-        return (
-            <div>
-                <div
-                    className="abs buttons"
-                    id="download"
-                    onClick={() => {
-                        window.exportToSTL(this.props.avatarName);
-                    }}
-                >
-                    Download as STL
-                </div>
+export default function (props) {
+    return (
+        <div>
+            <div
+                className="abs buttons"
+                id="download"
+                onClick={() => {
+                    window.exportToSTL(props.avatarName);
+                }}
+            >
+                Download as STL
             </div>
-        );
-    }
+        </div>
+    );
 }
