@@ -5,7 +5,7 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 // Loading Assets (SubComponents & CSS)
 import "../css/SearchBar.css";
 
-export default function (props) {
+export default function SearchBar(props) {
     function handleValueChange(e) {
         props.updateSearchValue(e.target.value);
     }

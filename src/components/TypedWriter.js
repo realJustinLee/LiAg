@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import Typed from "typed.js";
 
-export default function (props) {
+export default function TypedWriter(props) {
     let element;
 
     useEffect(() => {
@@ -11,7 +11,7 @@ export default function (props) {
         return () => {
             typed.destroy();
         };
-    }, [props]);
+    }, [props, element]);
 
     return (
         <span

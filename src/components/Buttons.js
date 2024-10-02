@@ -3,7 +3,7 @@ import React from "react";
 // Loading Assets (SubComponents & CSS)
 import '../css/Buttons.css';
 
-export default function (props) {
+export default function Buttons(props) {
     return (
         <div>
             <div

@@ -6,7 +6,7 @@ import {faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 import "../css/Popup.css";
 import logo from '../logo.svg';
 
-export default function (props) {
+export default function Popup(props) {
     if (props.popup) {
         return (
             <div className="screen abs top left">

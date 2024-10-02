@@ -7,7 +7,7 @@ import "../css/Editor.css";
 import bones from "../library/bones.json";
 import model from "../library/poses/model.json";
 
-export default function () {
+export default function Editor() {
     const [pose, setPose] = useState({
         Torso_Hip: {x: 0, y: 0, z: 0},
         Torso_Spine: {x: 0, y: 0, z: 0},
@@ -35,7 +35,7 @@ export default function () {
             pose[bone] = window.getRotation(bone)
             setPose(pose);
         }
-    })
+    },[pose])
 
     function exportPose() {
         for (const boneElem of bones) {

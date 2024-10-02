@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import Selector from "./Selector";
 import "../css/Category.css";
 
-export default function (props) {
+export default function Category(props) {
     const [isLeft, setLeft] = useState(false);
 
     // Update the state of parent App from child Component

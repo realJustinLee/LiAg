@@ -4,7 +4,7 @@ import Popup from './Popup';
 // Loading Assets (SubComponents & CSS)
 import "../css/Footer.css";
 
-export default function (props) {
+export default function Footer() {
     const [popup, setPopup] = useState(false);
     const [message, setMessage] = useState("");
 
