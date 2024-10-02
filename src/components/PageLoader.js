@@ -1,40 +1,35 @@
-import React, {Component} from "react";
+import React, {useEffect, useState} from "react";
 
 // Loading Assets (SubComponents & CSS)
 import logo from "../logo.svg";
 import "../css/Loader.css";
 
-export default class PageLoader extends Component {
+let check;
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: true
-        }
-    }
+export default function PageLoader() {
+    const [loading, setLoading] = useState(true);
+    const [check, setCheck] = useState(undefined);
 
-    componentDidMount() {
-        this.check = setInterval(() => {
+    useEffect(() => {
+        setCheck(setInterval(() => {
             if (window.loaded) {
-                clearInterval(this.check);
-                this.setState({loading: false})
+                clearInterval(check);
+                setLoading(false);
             }
-        }, 1000)
-    }
+        }, 1000))
+    }, [check]);
 
-    render() {
-        if (this.state.loading) {
-            return (
-                <div className="dark-screen abs top left">
-                    <div className="abs circle">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                    </div>
+    if (loading) {
+        return (
+            <div className="dark-screen abs top left">
+                <div className="abs circle">
+                    <img src={logo} className="App-logo" alt="logo"/>
                 </div>
-            );
-        } else {
-            return (
-                <div/>
-            );
-        }
+            </div>
+        );
+    } else {
+        return (
+            <div/>
+        );
     }
 }

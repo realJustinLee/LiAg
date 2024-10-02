@@ -1,38 +1,32 @@
-import React, {Component} from "react";
+import React, {useEffect} from "react";
 
 // Loading Assets (SubComponents & CSS)
 import logo from "../logo.svg";
 import "../css/Loader.css";
 
-export default class PartLoader extends Component {
+export default function PartLoader(props) {
+    const [check, setCheck] = React.useState(undefined);
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        this.check = setInterval(() => {
+    useEffect(() => {
+        setCheck(setInterval(() => {
             if (window.partloaded) {
-                clearInterval(this.check);
-                this.props.updateLoading(false)
+                clearInterval(check);
+                props.updateLoading(false)
             }
-        }, 200);
-    }
+        }, 200));
+    }, [check])
 
-    getSnapshotBeforeUpdate(prevProps, prevState) {
-        clearInterval(this.check)
-        return null
-    }
-
-    render() {
-        if (this.props.loading) {
-            return (
-                <div className="screen abs top left">
-                    <div className="abs circle">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                    </div>
+    if (props.loading) {
+        return (
+            <div className="screen abs top left">
+                <div className="abs circle">
+                    <img src={logo} className="App-logo" alt="logo"/>
                 </div>
-            );
-        } else {
-            return (
-                <div/>
-            );
-        }
+            </div>
+        );
+    } else {
+        return (
+            <div/>
+        );
     }
 }
