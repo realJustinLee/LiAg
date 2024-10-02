@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Typed from "typed.js";
 
-class MyTyped extends Component {
+export default class MyTyped extends Component {
 
     componentDidMount() {
         const {options} = this.props;
@@ -23,5 +23,3 @@ class MyTyped extends Component {
         );
     }
 }
-
-export default MyTyped;

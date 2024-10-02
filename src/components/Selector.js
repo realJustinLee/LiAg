@@ -18,7 +18,7 @@ import standElements from "../library/stands.json";
 import poseElements from "../library/poses.json";
 import bones from "../library/bones.json";
 
-class Selector extends Component {
+export default class Selector extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -370,5 +370,3 @@ class Selector extends Component {
         );
     }
 }
-
-export default Selector;

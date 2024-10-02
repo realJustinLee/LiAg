@@ -4,7 +4,7 @@ import React, {Component} from "react";
 import logo from "../logo.svg";
 import "../css/Loader.css";
 
-class PageLoader extends Component {
+export default class PageLoader extends Component {
 
     constructor(props) {
         super(props);
@@ -38,5 +38,3 @@ class PageLoader extends Component {
         }
     }
 }
-
-export default PageLoader

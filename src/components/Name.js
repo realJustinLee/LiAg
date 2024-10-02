@@ -4,7 +4,7 @@ import ContentEditable from "react-contenteditable";
 // Loading Assets (SubComponents & CSS)
 import "../css/Name.css";
 
-class Name extends Component {
+export default class Name extends Component {
 
     handleChange = (event) => {
         this.props.updateAvatarName(event.target.value);
@@ -23,5 +23,3 @@ class Name extends Component {
         );
     }
 }
-
-export default Name;

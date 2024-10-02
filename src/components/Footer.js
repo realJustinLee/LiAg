@@ -4,7 +4,7 @@ import Popup from './Popup';
 // Loading Assets (SubComponents & CSS)
 import "../css/Footer.css";
 
-class Footer extends Component {
+export default class Footer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -56,5 +56,3 @@ class Footer extends Component {
         );
     }
 }
-
-export default Footer;

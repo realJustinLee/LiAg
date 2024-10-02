@@ -7,7 +7,7 @@ import "../css/Editor.css";
 import bones from "../library/bones.json";
 import model from "../library/poses/model.json";
 
-class Editor extends Component {
+export default class Editor extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -115,5 +115,3 @@ class Editor extends Component {
         );
     }
 }
-
-export default Editor;

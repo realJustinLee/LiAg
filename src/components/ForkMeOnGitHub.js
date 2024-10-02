@@ -2,7 +2,7 @@
 import "github-fork-ribbon-css/gh-fork-ribbon.css";
 import "../css/ForkMeOnGitHub.css"
 
-function ForkMeOnGitHub() {
+export default function ForkMeOnGitHub() {
     return (
         <div className="unselectable">
             <a href="https://github.com/realJustinLee/LiAg" className="github-corner" aria-label="Fork me on GitHub">
@@ -23,5 +23,3 @@ function ForkMeOnGitHub() {
         </div>
     );
 }
-
-export default ForkMeOnGitHub;

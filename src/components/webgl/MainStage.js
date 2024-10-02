@@ -4,7 +4,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import MinGeometryFinder from "./MinGeometryFinder";
 import MinSTLExporter from "./MinSTLExporter";
 
-class MainStage {
+export default class MainStage {
     constructor() {
         this.camera = null;
         this.scene = null;
@@ -752,5 +752,3 @@ class MainStage {
         }
     };
 }
-
-export default MainStage;

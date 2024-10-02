@@ -4,7 +4,7 @@ import React, {Component} from "react";
 import logo from "../logo.svg";
 import "../css/Loader.css";
 
-class PartLoader extends Component {
+export default class PartLoader extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         this.check = setInterval(() => {
@@ -36,5 +36,3 @@ class PartLoader extends Component {
         }
     }
 }
-
-export default PartLoader

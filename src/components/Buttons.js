@@ -3,7 +3,7 @@ import React, {Component} from "react";
 // Loading Assets (SubComponents & CSS)
 import '../css/Buttons.css';
 
-class Buttons extends Component {
+export default class Buttons extends Component {
     render() {
         return (
             <div>
@@ -20,5 +20,3 @@ class Buttons extends Component {
         );
     }
 }
-
-export default Buttons;

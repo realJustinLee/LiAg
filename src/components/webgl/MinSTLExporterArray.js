@@ -3,7 +3,7 @@ import {Face3, Geometry} from "three/examples/jsm/deprecated/Geometry";
 import {deprecate} from "@testing-library/jest-dom/dist/utils";
 
 @deprecate
-class MinSTLExporterArray {
+export default class MinSTLExporterArray {
     parse(scene) {
         let vector = new THREE.Vector3();
         let normalMatrixWorld = new THREE.Matrix3();
@@ -150,5 +150,3 @@ class MinSTLExporterArray {
         return output;
     }
 }
-
-export default MinSTLExporterArray;

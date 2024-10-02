@@ -6,7 +6,7 @@ import {faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 import "../css/Popup.css";
 import logo from '../logo.svg';
 
-class Popup extends Component {
+export default class Popup extends Component {
 
     render() {
         if (this.props.popup) {
@@ -32,5 +32,3 @@ class Popup extends Component {
         }
     }
 }
-
-export default Popup;

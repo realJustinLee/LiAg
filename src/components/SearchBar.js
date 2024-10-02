@@ -5,7 +5,7 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 // Loading Assets (SubComponents & CSS)
 import "../css/SearchBar.css";
 
-class SearchBar extends Component {
+export default class SearchBar extends Component {
 
     handleChange = (event) => {
         // this.setState({search: event.target.value});
@@ -24,5 +24,3 @@ class SearchBar extends Component {
         );
     }
 }
-
-export default SearchBar

@@ -4,7 +4,7 @@ import React, {Component} from "react";
 import Selector from "./Selector";
 import "../css/Category.css";
 
-class Category extends Component {
+export default class Category extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -114,5 +114,3 @@ class Category extends Component {
         }
     }
 }
-
-export default Category;

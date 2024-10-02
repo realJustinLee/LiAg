@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-class MinSTLExporter {
+export default class MinSTLExporter {
 
     parse(scene) {
         let output = '';
@@ -115,5 +115,3 @@ class MinSTLExporter {
         return output;
     }
 }
-
-export default MinSTLExporter;
