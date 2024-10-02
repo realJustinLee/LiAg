@@ -16,7 +16,7 @@ export default function PageLoader() {
                 clearInterval(check);
                 setLoading(false);
             }
-        }, 1000))
+        }, 500))
     }, [check]);
 
     if (loading) {

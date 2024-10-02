@@ -32,10 +32,11 @@ export default function Editor() {
     useEffect(() => {
         for (const boneElem of bones) {
             let bone = boneElem.bone;
-            pose[bone] = window.getRotation(bone)
-            setPose(pose);
+            let newPose = pose;
+            newPose[bone] = window.getRotation(bone)
+            setPose(newPose);
         }
-    },[pose])
+    }, [pose])
 
     function exportPose() {
         for (const boneElem of bones) {
@@ -54,8 +55,9 @@ export default function Editor() {
     const controls = [];
 
     function updatePose(bone, axis, value) {
-        pose[bone][axis] = value
-        setPose(pose);
+        let newPose = pose;
+        newPose[bone][axis] = value
+        setPose(newPose);
         window.changeRotation(bone, value, axis);
     }
 
