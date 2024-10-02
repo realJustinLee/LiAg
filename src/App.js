@@ -19,7 +19,7 @@ import Buttons from "./components/Buttons";
 import Popup from "./components/Popup";
 import Category from "./components/Category";
 import PartLoader from "./components/PartLoader";
-import MyTyped from "./components/MyTyped";
+import TypedWriter from "./components/TypedWriter";
 
 
 class App extends Component {
@@ -123,7 +123,7 @@ class App extends Component {
                             <img src={logo} className="App-logo" alt="Justin Lee Logo"/>
                             <div className="full-screen-message">
                                 <code>
-                                    <MyTyped
+                                    <TypedWriter
                                         options={{
                                             strings: [
                                                 "Sorry.",
