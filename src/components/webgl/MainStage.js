@@ -6,6 +6,12 @@ import MinSTLExporter from "./MinSTLExporter";
 
 export default class MainStage {
     constructor() {
+        if (MainStage._instance) {
+            console.warn("Singleton classes can't be instantiated more than once.")
+            return this;
+        }
+        MainStage._instance = this
+
         this.camera = null;
         this.scene = null;
         this.renderer = null;
@@ -157,7 +163,7 @@ export default class MainStage {
 
         // Expose global flags
         window.loaded = false;
-        window.partloaded = false;
+        window.partLoaded = false;
 
         // Expose global functions
         window.changeStand = this.changeStand.bind(this);
@@ -457,7 +463,7 @@ export default class MainStage {
                         this.placeStand();
                     }
                 }
-                window.partloaded = true;
+                window.partLoaded = true;
             },
             null,
             function (error) {
@@ -556,7 +562,7 @@ export default class MainStage {
     };
 
     changeMesh(category, part, isLeft, bones, poseData) {
-        window.partloaded = false;
+        window.partLoaded = false;
         let meshType;
         let meshFileName;
         let rotation;

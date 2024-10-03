@@ -18,26 +18,27 @@ import standElements from "../library/stands.json";
 import poseElements from "../library/poses.json";
 import bones from "../library/bones.json";
 
+export let check = false;
+
 export default function Selector(props) {
     const [editorSelected, setEditorSelected] = useState(false);
     const [pose, setPose] = useState(undefined);
     const [search, setSearch] = useState("")
-    const [initialized, setInitialized] = useState(false);
 
     function updateSearchValue(search) {
         setSearch(search);
     }
 
     useEffect(() => {
-        // if (initialized === false) {
+        if (check === false) {
             // Load the base model with defaultMeshes and defaultPose
             axios.get("./models/poses/default.json").then(res => {
                 setPose(res.data);
                 window.loadDefaultMeshes(bones, res.data);
             });
-            // setInitialized(true);
-        // }
-    }, [initialized]);
+            check = true;
+        }
+    });
 
     function applyPose(file) {
         //Ajax in react

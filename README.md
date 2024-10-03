@@ -13,7 +13,7 @@ and users can export the avatars into STL files which can be used for 3D printin
 
 ## Version
 
-- `1.3.0`
+- `2.0.0`
 
 ## Platform Compatibility
 
@@ -53,4 +53,4 @@ The Exported STL Model
 
 # Made with ❤ by [Justin Lee](https://github.com/realJustinLee)!
 
-™ and © 1997-2022 Justin Lee. All Rights Reserved. [License Agreement](./LICENSE)
+™ and © 1997-2024 Justin Lee. All Rights Reserved. [License Agreement](./LICENSE)

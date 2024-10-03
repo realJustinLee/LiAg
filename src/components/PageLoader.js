@@ -4,20 +4,19 @@ import React, {useEffect, useState} from "react";
 import logo from "../logo.svg";
 import "../css/Loader.css";
 
-let check;
+export let check = undefined;
 
 export default function PageLoader() {
     const [loading, setLoading] = useState(true);
-    const [check, setCheck] = useState(undefined);
 
     useEffect(() => {
-        setCheck(setInterval(() => {
+        check = setInterval(() => {
             if (window.loaded) {
                 clearInterval(check);
                 setLoading(false);
             }
-        }, 500))
-    }, [check]);
+        }, 1000)
+    }, [loading]);
 
     if (loading) {
         return (

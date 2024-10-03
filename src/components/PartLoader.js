@@ -4,17 +4,18 @@ import React, {useEffect} from "react";
 import logo from "../logo.svg";
 import "../css/Loader.css";
 
+export let check = undefined;
+
 export default function PartLoader(props) {
-    const [check, setCheck] = React.useState(undefined);
 
     useEffect(() => {
-        setCheck(setInterval(() => {
-            if (window.partloaded) {
+        check = setInterval(() => {
+            if (window.partLoaded) {
                 clearInterval(check);
                 props.updateLoading(false)
             }
-        }, 200));
-    }, [check])
+        }, 200);
+    },)
 
     if (props.loading) {
         return (

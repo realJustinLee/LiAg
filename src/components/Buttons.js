@@ -3,14 +3,14 @@ import React from "react";
 // Loading Assets (SubComponents & CSS)
 import '../css/Buttons.css';
 
-export default function Buttons(props) {
+export default function Buttons({avatarName}) {
     return (
         <div>
             <div
                 className="abs buttons"
                 id="download"
                 onClick={() => {
-                    window.exportToSTL(props.avatarName);
+                    window.exportToSTL(avatarName);
                 }}
             >
                 Download as STL

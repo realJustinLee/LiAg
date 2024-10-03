@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useEffect, useState} from 'react';
 import {CustomView, isMobileOnly, isTablet, isBrowser, withOrientationChange} from "react-device-detect";
 
 import logo from './logo.svg';
@@ -21,138 +21,131 @@ import Category from "./components/Category";
 import PartLoader from "./components/PartLoader";
 import TypedWriter from "./components/TypedWriter";
 
+export const mainStage = new MainStage();
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            category: CategoryList,
-            currentCategory: "head",
-            avatarName: "Give it a name",
-            UIDisplayed: true,
-            popup: false,
-            loadedMeshes: {
-                Torso: "default_torso",
-                LegR: "default_leg_R",
-                LegL: "default_leg_L",
-                Head: "default_head",
-                ArmR: "default_arm_R",
-                ArmL: "default_arm_L",
-                HandR: "open_hand_R",
-                HandL: "open_hand_L",
-                FootR: "default_foot_R",
-                FootL: "default_foot_L",
-                Stand: "circle"
-            },
-            editor: true,
-            partLoading: false,
-            message: "Sorry, this feature is still under development..."
-        }
-    };
+function App() {
+    const [currentCategory, setCurrentCategory] = useState("head");
+    const [avatarName, setAvatarName] = useState("Give it a name");
+    const [popup, setPopup] = useState(false);
+    const [loadedMeshes, setLoadedMeshes] = useState({
+        Torso: "default_torso",
+        LegR: "default_leg_R",
+        LegL: "default_leg_L",
+        Head: "default_head",
+        ArmR: "default_arm_R",
+        ArmL: "default_arm_L",
+        HandR: "open_hand_R",
+        HandL: "open_hand_L",
+        FootR: "default_foot_R",
+        FootL: "default_foot_L",
+        Stand: "circle"
+    });
+    const [partLoading, setPartLoading] = useState(false);
+    const [message, setMessage] = useState("Sorry, this feature is still under development...");
+    const [stageLoaded, setStageLoaded] = useState(false);
 
-    componentDidMount() {
-        if (isBrowser || isTablet) {
-            this.mainStage = new MainStage();
-            this.mainStage.init();
-            this.mainStage.animate();
+    useEffect(() => {
+        if (isBrowser || isTablet && stageLoaded === false) {
+            mainStage.init();
+            mainStage.animate();
+            setStageLoaded(true);
         }
+    }, [stageLoaded])
+
+    function updateCategory(_currentCategory) {
+        setCurrentCategory(_currentCategory);
     }
 
-    // Update the state of parent App from child Component
-    updateCategory = currentCategory => {
-        this.setState({currentCategory});
-    };
-    updateAvatarName = avatarName => {
-        this.setState({avatarName});
-    };
-    updatePopup = popup => {
-        this.setState({popup});
-    };
-    updateMeshes = loadedMeshes => {
-        this.setState({loadedMeshes});
-    };
-    updateLoading = partLoading => {
-        this.setState({partLoading});
-    };
-    updatePopupMessage = message => {
-        this.setState({message});
-    };
+    function updateAvatarName(_avatarName) {
+        setAvatarName(_avatarName);
+    }
 
-    render() {
-        return (
-            <div className="App">
-                <CustomView condition={isBrowser || isTablet}>
-                    <PageLoader/>
+    function updatePopup(_popup) {
+        setPopup(_popup);
+    }
+
+    function updateMeshes(_loadedMeshes) {
+        setLoadedMeshes(_loadedMeshes);
+    }
+
+    function updateLoading(_partLoading) {
+        setPartLoading(_partLoading);
+    }
+
+    function updatePopupMessage(_popupMessage) {
+        setMessage(_popupMessage);
+    }
+
+    return (
+        <div className="App">
+            <CustomView condition={isBrowser || isTablet}>
+                <PageLoader/>
+                <ForkMeOnGitHub/>
+                <Name
+                    avatarName={avatarName}
+                    updateAvatarName={updateAvatarName}
+                />
+                <Footer/>
+                <Buttons
+                    avatarName={avatarName}
+                    loadedMeshes={loadedMeshes}
+                />
+                <Popup
+                    popup={popup}
+                    message={message}
+                    updatePopup={updatePopup}
+                />
+                <Category
+                    category={CategoryList}
+                    currentCategory={currentCategory}
+                    updateCategory={updateCategory}
+                    UIDisplayed={true}
+                    loadedMeshes={loadedMeshes}
+                    updateMeshes={updateMeshes}
+                    updatePopup={updatePopup}
+                    updatePopupMessage={updatePopupMessage}
+                    editor={true}
+                    updateLoading={updateLoading}
+                />
+                <PartLoader
+                    loading={partLoading}
+                    updateLoading={updateLoading}
+                />
+            </CustomView>
+            <CustomView condition={isMobileOnly}>
+                <div className="App">
                     <ForkMeOnGitHub/>
-                    <Name
-                        avatarName={this.state.avatarName}
-                        updateAvatarName={this.updateAvatarName}
-                    />
-                    <Footer/>
-                    <Buttons
-                        avatarName={this.state.avatarName}
-                        loadedMeshes={this.state.loadedMeshes}
-                    />
-                    <Popup
-                        popup={this.state.popup}
-                        message={this.state.message}
-                        updatePopup={this.updatePopup}
-                    />
-                    <Category
-                        category={this.state.category}
-                        currentCategory={this.state.currentCategory}
-                        updateCategory={this.updateCategory}
-                        // updatePose={this.updatePose}
-                        UIDisplayed={this.state.UIDisplayed}
-                        loadedMeshes={this.state.loadedMeshes}
-                        updateMeshes={this.updateMeshes}
-                        updatePopup={this.updatePopup}
-                        updatePopupMessage={this.updatePopupMessage}
-                        editor={this.state.editor}
-                        updateLoading={this.updateLoading}
-                    />
-                    <PartLoader
-                        loading={this.state.partLoading}
-                        updateLoading={this.updateLoading}
-                    />
-                </CustomView>
-                <CustomView condition={isMobileOnly}>
-                    <div className="App">
-                        <ForkMeOnGitHub/>
-                        <header className="App-header">
-                            <img src={logo} className="App-logo" alt="Justin Lee Logo"/>
-                            <div className="full-screen-message">
-                                <code>
-                                    <TypedWriter
-                                        options={{
-                                            strings: [
-                                                "Sorry.",
-                                                "This content is currently unavailable on mobile devices.^2000",
-                                                "Come back soon for updates!"
-                                            ],
-                                            typeSpeed: 50,
-                                            backSpeed: 50,
-                                            showCursor: true,
-                                        }}
-                                    />
-                                </code>
-                            </div>
-                            <a
-                                className="App-link"
-                                href="https://github.com/realJustinLee/LiAg"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Fork me on GitHub
-                            </a>
-                        </header>
-                    </div>
-                </CustomView>
-            </div>
-        );
-    };
+                    <header className="App-header">
+                        <img src={logo} className="App-logo" alt="Justin Lee Logo"/>
+                        <div className="full-screen-message">
+                            <code>
+                                <TypedWriter
+                                    options={{
+                                        strings: [
+                                            "Sorry.",
+                                            "This content is currently unavailable on mobile devices.^2000",
+                                            "Come back soon for updates!"
+                                        ],
+                                        typeSpeed: 50,
+                                        backSpeed: 50,
+                                        showCursor: true,
+                                    }}
+                                />
+                            </code>
+                        </div>
+                        <a
+                            className="App-link"
+                            href="https://github.com/realJustinLee/LiAg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Fork me on GitHub
+                        </a>
+                    </header>
+                </div>
+            </CustomView>
+        </div>
+    );
 }
 
-App = withOrientationChange(App)
-
-export default App;
+export default withOrientationChange(App);
