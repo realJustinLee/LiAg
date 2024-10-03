@@ -661,6 +661,8 @@ export default class MainStage {
 
     selectedMesh(meshType) {
         if (this.selected === "mesh-stand") {
+            // DO NOT remove this line unless three.js coloring bug is fixed
+            this.changeColor(this.selected, this.normalColor);
             this.changeColor(this.selected, this.standColor);
         } else {
             this.changeColor(this.selected, this.normalColor);

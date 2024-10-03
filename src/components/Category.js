@@ -5,7 +5,7 @@ import Selector from "./Selector";
 import "../css/Category.css";
 
 export default function Category(props) {
-    const [isLeft, setLeft] = useState(false);
+    const [isLeft, setLeft] = useState(true);
 
     // Update the state of parent App from child Component
     function updateLeft(_isLeft) {
@@ -13,30 +13,25 @@ export default function Category(props) {
     }
 
     // Passing through the state from the properties
-    const category = props.category;
+    const categories = props.categories;
     const current = props.currentCategory;
 
-    //JSX element to display the HTML
-    const categoryDiv = [];
-
-    for (let i = 0; i < category.length; i++) {
-        let name = category[i].name;
-        let file = category[i].img_file;
-        if (name === current) {
-            categoryDiv.push(
+    const categoryDiv = categories.map((category, i) => {
+        if (category.name === current) {
+            return (
                 <div className="category selected-category" key={i}>
-                    <img src={"img/graphics_creation/" + file} alt={name}/>
+                    <img src={"img/graphics_creation/" + category.img_file} alt={category.name}/>
                 </div>
             );
         } else {
-            categoryDiv.push(
+            return (
                 <div
                     className="category"
                     key={i}
                     onClick={() => {
-                        props.updateCategory(name);
+                        props.updateCategory(category.name);
                         let meshType;
-                        switch (name) {
+                        switch (category.name) {
                             case "head":
                                 meshType = "Head";
                                 break;
@@ -77,13 +72,13 @@ export default function Category(props) {
                         }
                     }}
                 >
-                    <img src={"img/graphics_creation/" + file} alt={name}/>
+                    <img src={"img/graphics_creation/" + category.img_file} alt={category.name}/>
                 </div>
             );
         }
-    }
+    })
 
-    if (props.UIDisplayed) {
+    if (props.showHud) {
         return (
             <div className="abs top right panel">
                 <div className="abs top left left-side unselectable">

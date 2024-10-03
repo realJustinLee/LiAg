@@ -50,27 +50,23 @@ export default function Selector(props) {
 
     function renderPremium(item) {
         if (item.premium) {
-            return (
-                <div className="abs premium">
-                    <FontAwesomeIcon
-                        className="abs centered white big-icon"
-                        icon={faDollarSign}
-                    />
-                </div>
-            );
+            return (<div className="abs premium">
+                <FontAwesomeIcon
+                    className="abs centered white big-icon"
+                    icon={faDollarSign}
+                />
+            </div>);
         }
     }
 
     function renderLink(item) {
         if (item.link) {
-            return (
-                <a className="abs link" href={item.link}>
-                    <FontAwesomeIcon
-                        className="abs centered white icon"
-                        icon={faLink}
-                    />
-                </a>
-            );
+            return (<a className="abs link" href={item.link}>
+                <FontAwesomeIcon
+                    className="abs centered white icon"
+                    icon={faLink}
+                />
+            </a>);
         }
     }
 
@@ -119,17 +115,12 @@ export default function Selector(props) {
             console.log(category)
     }
 
-    let filteredLibrary = library.filter(
-        (element) => {
-            return element.name.toLowerCase().indexOf(search) !== -1;
-        }
-    );
+    let filteredLibrary = library.filter((element) => {
+        return element.name.toLowerCase().indexOf(search) !== -1;
+    });
 
-    //JSX element to display the HTML
-    const elementDiv = [];
-
-    for (let i = 0; i < filteredLibrary.length; i++) {
-        elementDiv.push(
+    const elementDiv = filteredLibrary.map((part, i) => {
+        return (
             <div
                 className="el"
                 key={i}
@@ -157,57 +148,43 @@ export default function Selector(props) {
                         default:
                             meshType = undefined;
                     }
-                    if (filteredLibrary[i].premium) {
-                        props.updatePopupMessage(
-                            "Sorry, This is a premium object."
-                        );
+                    if (part.premium) {
+                        props.updatePopupMessage("Sorry, This is a premium object.");
                         props.updatePopup(true);
                     } else {
                         if (category === "pose") {
-                            applyPose(filteredLibrary[i].file);
+                            applyPose(part.file);
                         } else if (category === "stand") {
-                            window.changeStand(filteredLibrary[i].file);
+                            window.changeStand(part.file);
                         } else {
                             props.updateLoading(true);
-                            window.changeMesh(
-                                category,
-                                filteredLibrary[i],
-                                isLeft,
-                                bones,
-                                pose
-                            );
+                            window.changeMesh(category, part, isLeft, bones, pose);
                             let loadedMeshes = props.loadedMeshes;
-                            loadedMeshes[meshType] = filteredLibrary[i].file;
+                            loadedMeshes[meshType] = part.file;
                             props.updateMeshes(loadedMeshes);
                         }
                     }
                 }}
             >
                 <div className="img">
-                    <img
-                        src={
-                            "img/library/" + category + "/" + filteredLibrary[i].img
-                        }
-                        alt={filteredLibrary[i].img}
-                    />
+                    <img src={"img/library/" + category + "/" + part.img} alt={part.img}/>
                 </div>
                 <div className="unselectable el-name">
-                    {filteredLibrary[i].name}
+                    {part.name}
                 </div>
-                {renderPremium(filteredLibrary[i])}
-                {renderLink(filteredLibrary[i])}
+                {renderPremium(part)}
+                {renderLink(part)}
             </div>
         );
-    }
+    })
+
     elementDiv.push(
         <div
             className="el"
             key="add"
             onClick={() => {
                 props.updatePopup(true);
-                props.updatePopupMessage(
-                    "Sorry, This feature is still in development."
-                );
+                props.updatePopupMessage("Sorry, This feature is still in development.");
             }}
         >
             <div className="img">
@@ -223,10 +200,7 @@ export default function Selector(props) {
     const buttons = (
         <div className="abs switch">
             <div
-                className={
-                    "unselectable abs left side L " +
-                    (isLeft ? "side-selected" : "")
-                }
+                className={"unselectable abs left side L " + (isLeft ? "side-selected" : "")}
                 onClick={() => {
                     props.updateLeft(true);
                     let meshType;
@@ -260,10 +234,7 @@ export default function Selector(props) {
                 Left
             </div>
             <div
-                className={
-                    "unselectable abs right side R " +
-                    (isLeft ? "" : "side-selected")
-                }
+                className={"unselectable abs right side R " + (isLeft ? "" : "side-selected")}
                 onClick={() => {
                     props.updateLeft(false);
                     let meshType;
@@ -302,10 +273,7 @@ export default function Selector(props) {
     const editorButtons = (
         <div className="abs switch">
             <div
-                className={
-                    "unselectable abs left side L " +
-                    (editorSelected ? "" : "side-selected")
-                }
+                className={"unselectable abs left side L " + (editorSelected ? "" : "side-selected")}
                 onClick={() => {
                     setEditorSelected(false);
                 }}
@@ -313,10 +281,7 @@ export default function Selector(props) {
                 Poses
             </div>
             <div
-                className={
-                    "unselectable abs right side R " +
-                    (editorSelected ? "side-selected" : "")
-                }
+                className={"unselectable abs right side R " + (editorSelected ? "side-selected" : "")}
                 onClick={() => {
                     setEditorSelected(true);
                 }}
@@ -337,26 +302,12 @@ export default function Selector(props) {
                     {sideIndicator ? buttons : ""}
                     {category === "pose" && props.editor ? editorButtons : ""}
                     <div
-                        className={
-                            "abs top left " +
-                            (category === "pose" && editorSelected
-                                ? " selector"
-                                : " selector") +
-                            (sideIndicator ||
-                            (category === "pose" && props.editor)
-                                ? " selector-full"
-                                : " selector")
-                        }
+                        className={"abs top left " + (category === "pose" && editorSelected ? " selector" : " selector") + (sideIndicator || (category === "pose" && props.editor) ? " selector-full" : " selector")}
                     >
-                        {category === "pose" &&
-                        editorSelected &&
-                        props.editor ? (
-                            <Editor/>
-                        ) : (
+                        {category === "pose" && editorSelected && props.editor ? (<Editor/>) : (
                             <div className="abs top left selector-no-padding">
                                 {elementDiv}
-                            </div>
-                        )}
+                            </div>)}
                     </div>
                 </div>
             </div>

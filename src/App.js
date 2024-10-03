@@ -72,10 +72,10 @@ function App() {
                     updatePopup={setPopup}
                 />
                 <Category
-                    category={CategoryList}
+                    categories={CategoryList}
                     currentCategory={currentCategory}
                     updateCategory={setCurrentCategory}
-                    UIDisplayed={true}
+                    showHud={true}
                     loadedMeshes={loadedMeshes}
                     updateMeshes={setLoadedMeshes}
                     updatePopup={setPopup}

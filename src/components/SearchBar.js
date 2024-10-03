@@ -13,7 +13,7 @@ export default function SearchBar({search, updateSearchValue}) {
     return (
         <div className="abs search-container">
             <input className="search-text" type="text" value={search} placeholder="Search"
-                   onChange={handleValueChange}/>
+                   name="part-search" onChange={handleValueChange}/>
             <span className="abs search-button">
                     <FontAwesomeIcon className="abs centered" icon={faSearch}/>
                 </span>
