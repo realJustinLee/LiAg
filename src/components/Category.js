@@ -93,7 +93,6 @@ export default function Category(props) {
                     currentCategory={props.currentCategory}
                     isLeft={isLeft}
                     updateLeft={updateLeft}
-                    // updatePose={props.updatePose}
                     loadedMeshes={props.loadedMeshes}
                     updateMeshes={props.updateMeshes}
                     updatePopup={props.updatePopup}

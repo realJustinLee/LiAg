@@ -6,18 +6,18 @@ import "../css/Loader.css";
 
 export let check = undefined;
 
-export default function PartLoader(props) {
+export default function PartLoader({loading, updateLoading}) {
 
     useEffect(() => {
         check = setInterval(() => {
             if (window.partLoaded) {
                 clearInterval(check);
-                props.updateLoading(false)
+                updateLoading(false)
             }
         }, 200);
     },)
 
-    if (props.loading) {
+    if (loading) {
         return (
             <div className="screen abs top left">
                 <div className="abs circle">

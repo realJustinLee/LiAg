@@ -12,6 +12,8 @@ export default class MainStage {
         }
         MainStage._instance = this
 
+        this.initialized = false;
+
         this.camera = null;
         this.scene = null;
         this.renderer = null;
@@ -154,11 +156,13 @@ export default class MainStage {
         document.body.appendChild(this.link);
 
         document.body.onresize = function () {
-            //size of viewport
-            this.renderer.setSize(window.innerWidth, window.innerHeight);
-            //aspect ratio update
-            this.camera.aspect = window.innerWidth / window.innerHeight;
-            this.camera.updateProjectionMatrix();
+            if (this.initialized) {
+                //size of viewport
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                //aspect ratio update
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+            }
         }.bind(this);
 
         // Expose global flags
@@ -196,11 +200,14 @@ export default class MainStage {
         }.bind(this);
 
         // this.buildDevHelper();
+        this.buildGrid();
         this.buildCamera();
         this.buildRenderer();
         this.buildControls();
         this.buildLights();
         this.buildFloor();
+
+        this.initialized = true;
     }
 
     buildDevHelper() {
@@ -209,18 +216,20 @@ export default class MainStage {
         axes.name = "axes";
         this.scene.add(axes);
 
-        // build Grid
-        let size = 50;
-        let divisions = 60;
-        let colorCenterLine = 0x999999;
-        let colorGrid = 0xffffff;
-        let grid = new THREE.GridHelper(size, divisions, colorCenterLine, colorGrid);
-        grid.name = "grid";
-        this.scene.add(grid);
-
         // expose scene to DOM
         window.scene = this.scene
         window.THREE = THREE
+    }
+
+    buildGrid() {
+        // build Grid
+        let size = 50;
+        let divisions = 60;
+        let colorCenterLine = 0x007777;
+        let colorGrid = 0x00cccc;
+        let grid = new THREE.GridHelper(size, divisions, colorCenterLine, colorGrid);
+        grid.name = "grid";
+        this.scene.add(grid);
     }
 
     buildCamera() {
@@ -271,8 +280,8 @@ export default class MainStage {
          * nz = back
          */
 
-        let path = "./img/textures/SwedishRoyalCastle/";
-        let extension = ".jpg";
+        let path = "./img/textures/nightSky/";
+        let extension = ".png";
         let urls = [
             path + "px" + extension,
             path + "nx" + extension,

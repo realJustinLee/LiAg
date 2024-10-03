@@ -52,30 +52,6 @@ function App() {
         }
     }, [stageLoaded])
 
-    function updateCategory(_currentCategory) {
-        setCurrentCategory(_currentCategory);
-    }
-
-    function updateAvatarName(_avatarName) {
-        setAvatarName(_avatarName);
-    }
-
-    function updatePopup(_popup) {
-        setPopup(_popup);
-    }
-
-    function updateMeshes(_loadedMeshes) {
-        setLoadedMeshes(_loadedMeshes);
-    }
-
-    function updateLoading(_partLoading) {
-        setPartLoading(_partLoading);
-    }
-
-    function updatePopupMessage(_popupMessage) {
-        setMessage(_popupMessage);
-    }
-
     return (
         <div className="App">
             <CustomView condition={isBrowser || isTablet}>
@@ -83,7 +59,7 @@ function App() {
                 <ForkMeOnGitHub/>
                 <Name
                     avatarName={avatarName}
-                    updateAvatarName={updateAvatarName}
+                    updateAvatarName={setAvatarName}
                 />
                 <Footer/>
                 <Buttons
@@ -93,23 +69,23 @@ function App() {
                 <Popup
                     popup={popup}
                     message={message}
-                    updatePopup={updatePopup}
+                    updatePopup={setPopup}
                 />
                 <Category
                     category={CategoryList}
                     currentCategory={currentCategory}
-                    updateCategory={updateCategory}
+                    updateCategory={setCurrentCategory}
                     UIDisplayed={true}
                     loadedMeshes={loadedMeshes}
-                    updateMeshes={updateMeshes}
-                    updatePopup={updatePopup}
-                    updatePopupMessage={updatePopupMessage}
+                    updateMeshes={setLoadedMeshes}
+                    updatePopup={setPopup}
+                    updatePopupMessage={setMessage}
                     editor={true}
-                    updateLoading={updateLoading}
+                    updateLoading={setPartLoading}
                 />
                 <PartLoader
                     loading={partLoading}
-                    updateLoading={updateLoading}
+                    updateLoading={setPartLoading}
                 />
             </CustomView>
             <CustomView condition={isMobileOnly}>

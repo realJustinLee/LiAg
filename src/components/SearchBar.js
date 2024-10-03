@@ -5,14 +5,14 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 // Loading Assets (SubComponents & CSS)
 import "../css/SearchBar.css";
 
-export default function SearchBar(props) {
+export default function SearchBar({search, updateSearchValue}) {
     function handleValueChange(e) {
-        props.updateSearchValue(e.target.value);
+        updateSearchValue(e.target.value);
     }
 
     return (
         <div className="abs search-container">
-            <input className="search-text" type="text" value={props.search} placeholder="Search"
+            <input className="search-text" type="text" value={search} placeholder="Search"
                    onChange={handleValueChange}/>
             <span className="abs search-button">
                     <FontAwesomeIcon className="abs centered" icon={faSearch}/>
