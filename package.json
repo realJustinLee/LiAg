@@ -1,6 +1,6 @@
 {
   "name": "liag",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",

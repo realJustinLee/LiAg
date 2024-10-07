@@ -21,7 +21,7 @@ import Category from "./components/Category";
 import PartLoader from "./components/PartLoader";
 import TypedWriter from "./components/TypedWriter";
 
-export const mainStage = new MainStage();
+const mainStage = new MainStage();
 
 function App() {
     const [currentCategory, setCurrentCategory] = useState("head");
@@ -45,7 +45,7 @@ function App() {
     const [stageLoaded, setStageLoaded] = useState(false);
 
     useEffect(() => {
-        if (isBrowser || isTablet && stageLoaded === false) {
+        if ((isBrowser || isTablet) && stageLoaded === false) {
             mainStage.init();
             mainStage.animate();
             setStageLoaded(true);

@@ -18,7 +18,7 @@ import standElements from "../library/stands.json";
 import poseElements from "../library/poses.json";
 import bones from "../library/bones.json";
 
-export let check = false;
+let check = false;
 
 export default function Selector(props) {
     const [editorSelected, setEditorSelected] = useState(false);

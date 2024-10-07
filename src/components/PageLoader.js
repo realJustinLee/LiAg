@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 import logo from "../logo.svg";
 import "../css/Loader.css";
 
-export let check = undefined;
+let check = undefined;
 
 export default function PageLoader() {
     const [loading, setLoading] = useState(true);

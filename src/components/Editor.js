@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import NumericInput from "react-numeric-input";
 
 // Loading Assets (SubComponents & CSS)
