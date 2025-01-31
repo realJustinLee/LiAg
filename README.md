@@ -53,4 +53,4 @@ The Exported STL Model
 
 # Made with ❤ by [Justin Lee](https://github.com/realJustinLee)!
 
-™ and © 1997-2024 Justin Lee. All Rights Reserved. [License Agreement](./LICENSE)
+™ and © 1997-2025 Justin Lee. All Rights Reserved. [License Agreement](./LICENSE)
