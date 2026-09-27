@@ -41,6 +41,10 @@ export default function Selector(props) {
     });
 
     function applyPose(file) {
+        // Only allow simple file names to prevent path traversal (CWE-22)
+        if (typeof file !== "string" || !/^[a-zA-Z0-9_-]+$/.test(file)) {
+            return;
+        }
         //Ajax in react
         axios.get("./models/poses/" + file + ".json").then(res => {
             setPose(res.data);
